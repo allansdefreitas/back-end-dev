@@ -1,4 +1,4 @@
-package edu.allan;
+package edu.allan.model;
 
 public class Calculator {
 

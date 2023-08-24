@@ -1,28 +1,46 @@
 package edu.allan.test;
 
+import java.util.logging.Logger;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import edu.allan.Calculator;
+import edu.allan.model.Calculator;
 import edu.allan.model.User;
 
 class UserTest {
 
 	private User user;
+	private Logger logger;
 	
-	@BeforeEach
 	public void createUser() {
 		this.user = new User("John", 28);
 		System.out.println("@BeforeEach");
+		
 	}
+	
+	public void createrLogger() {
+		this.logger
+        = Logger.getLogger(
+            UserTest.class.getName());
+	}
+	
+	@BeforeEach
+	public void beforeEach() {
+		this.createrLogger();
+		this.createUser();
+	}
+	
+	
 	
 	@AfterEach
 	public void emptyUser() {
-		this.user = new User();
+		this.user = null;
 		System.out.println("@AfterEach");
 	}
 	
@@ -46,6 +64,17 @@ class UserTest {
 		
 		Assertions.assertEquals(2, sum);
 		System.out.println("Test");
+	}
+	
+//	@Disabled("Not implemented yet")
+	@Test
+	void SumTest2() {
+		
+		int sum = Calculator.sum(1, 1);
+		
+		Assertions.assertEquals(2, sum);
+		System.out.println("Test");
+		logger.info("This is message 1");
 	}
 
 }

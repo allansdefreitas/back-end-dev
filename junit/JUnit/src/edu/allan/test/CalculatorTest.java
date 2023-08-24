@@ -3,7 +3,7 @@ package edu.allan.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import edu.allan.Calculator;
+import edu.allan.model.Calculator;
 
 class CalculatorTest {
 
