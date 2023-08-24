@@ -8,7 +8,7 @@ public class Calculator {
 		return a + b;
 	}
 
-	public static boolean isEven(int a) {
+	public static boolean isEven(Integer a) {
 		
 		if (a % 2 == 0){
 			return true;
