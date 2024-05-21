@@ -1,0 +1,6 @@
+json-server --watch backend/videos.json
+npm init
+npm init @eslint/config
+npx eslint script.js
+npx eslint . #check errors in all js files
+
