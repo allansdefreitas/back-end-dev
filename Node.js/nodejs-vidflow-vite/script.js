@@ -6,22 +6,29 @@ const containerVideos = document.querySelector(".videos__container");
 console.log("axios: " + axios);
 
 async function buscarEMostrarVideos() {
+  // Way 1
   // const urlVideos = import.meta.env.PROD
   //   ? "https://gist.githubusercontent.com/antonio-evaldo/e8a63621b51c883931eb3fa3a3eca990/raw/12f5c46ee6dd00d03c051adadaf341e06452cea0/videos.txt"
   //   : "http://localhost:3000/videos";
 
-  let urlVideos = null;
-  const isProd = import.meta.env.PROD;
-  if (isProd) {
-    urlVideos =
-      "https://gist.githubusercontent.com/antonio-evaldo/e8a63621b51c883931eb3fa3a3eca990/raw/12f5c46ee6dd00d03c051adadaf341e06452cea0/videos.txt";
-  } else {
-    urlVideos = "http://localhost:3000/videos";
-  }
+  // Way 2
+  // let urlVideos = null;
+  // const isProd = import.meta.env.PROD;
+
+  // if (isProd) {
+  //   urlVideos =
+  //     "https://gist.githubusercontent.com/antonio-evaldo/e8a63621b51c883931eb3fa3a3eca990/raw/12f5c46ee6dd00d03c051adadaf341e06452cea0/videos.txt";
+  // } else {
+  //   urlVideos = "http://localhost:3000/videos";
+  // }
+
+  // Way 3
+  const urlVideos = import.meta.env.VITE_URL_VIDEOS;
 
   console.log("allan");
   console.log(import.meta.env.PROD);
   console.log(urlVideos);
+
   try {
     // const busca = await fetch("http://localhost:3000/videos");
     // const videos = await busca.json();
