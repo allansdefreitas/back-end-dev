@@ -17,3 +17,7 @@ npm install json-server@0.16.0 -D
 #show version of local json-server
 npx json-server -v
 
+
+npm install axios@1.6.0 -E #-E stands for --save-exact #that means that the version in package.json will not contain ^.
+
+npm create vite@4.4.1
