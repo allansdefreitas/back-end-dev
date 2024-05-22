@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build-preview": "vite build --watch",
-    "preview": "vite preview",
+    "preview": "vite preview", 
     "api-local": "json-server --watch backend/videos.json",
     "lint": "eslint ."
   },
@@ -23,3 +23,5 @@
     "axios": "1.6.0"
   }
 }
+//npx vite preview = npm run preview
+//npx vite build = npm run build
