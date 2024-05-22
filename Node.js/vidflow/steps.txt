@@ -4,3 +4,16 @@ npm init @eslint/config
 npx eslint script.js
 npx eslint . #check errors in all js files
 
+#install extension of eslint for vscode
+
+npm install --save-dev --save-exact prettier@3.0.3
+
+#install prettier extension
+
+
+#pacote json-server localmente
+npm install json-server@0.16.0 -D
+
+#show version of local json-server
+npx json-server -v
+
