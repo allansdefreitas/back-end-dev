@@ -1,0 +1,15 @@
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/bin/Debug/net8.0/SalveMundus
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/bin/Debug/net8.0/SalveMundus.deps.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/bin/Debug/net8.0/SalveMundus.runtimeconfig.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/bin/Debug/net8.0/SalveMundus.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/bin/Debug/net8.0/SalveMundus.pdb
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.GeneratedMSBuildEditorConfig.editorconfig
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.AssemblyInfoInputs.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.AssemblyInfo.cs
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.csproj.CoreCompileInputs.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.sourcelink.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/refint/SalveMundus.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.pdb
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/SalveMundus.genruntimeconfig.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/SalveMundus/obj/Debug/net8.0/ref/SalveMundus.dll
