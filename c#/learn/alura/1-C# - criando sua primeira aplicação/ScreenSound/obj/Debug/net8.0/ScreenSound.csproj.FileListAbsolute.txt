@@ -1,0 +1,15 @@
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/bin/Debug/net8.0/ScreenSound
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/bin/Debug/net8.0/ScreenSound.deps.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/bin/Debug/net8.0/ScreenSound.runtimeconfig.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/bin/Debug/net8.0/ScreenSound.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/bin/Debug/net8.0/ScreenSound.pdb
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.GeneratedMSBuildEditorConfig.editorconfig
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.AssemblyInfoInputs.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.AssemblyInfo.cs
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.csproj.CoreCompileInputs.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.sourcelink.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/refint/ScreenSound.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.pdb
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ScreenSound.genruntimeconfig.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/ScreenSound/obj/Debug/net8.0/ref/ScreenSound.dll

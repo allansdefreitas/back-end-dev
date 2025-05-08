@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SalveMundus")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ScreenSound")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba79ba015abbad47422a368dcba24fd942618125")]
-[assembly: System.Reflection.AssemblyProductAttribute("SalveMundus")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SalveMundus")]
+[assembly: System.Reflection.AssemblyProductAttribute("ScreenSound")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ScreenSound")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
