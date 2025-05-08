@@ -23,5 +23,3 @@
     "axios": "1.6.0"
   }
 }
-//npx vite preview = npm run preview
-//npx vite build = npm run build
