@@ -23,6 +23,23 @@ void ShowOptionsMenu()
     Console.WriteLine("Type 4 to show the average of a band");
     Console.WriteLine("Type -1 to exit");
 
+    Console.Write("\nType an option: ");
+    string chosenOption = Console.ReadLine()!;
+
+    int chosenOptionInt = int.Parse(chosenOption);
+
+    if (chosenOptionInt == 1)
+    {
+        Console.WriteLine("You typed option 1");
+    }
+    else if (chosenOptionInt == 2)
+    {
+
+    }
+
+
+
+
 }
 
 ShowWelcomeMessage();
