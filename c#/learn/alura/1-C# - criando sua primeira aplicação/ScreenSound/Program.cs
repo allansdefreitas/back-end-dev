@@ -28,16 +28,34 @@ void ShowOptionsMenu()
 
     int chosenOptionInt = int.Parse(chosenOption);
 
-    if (chosenOptionInt == 1)
+    switch (chosenOptionInt)
     {
-        Console.WriteLine("You typed option 1");
+        case 1:
+            Console.WriteLine("You chose option " + chosenOption);
+            break;
+        case 2:
+            Console.WriteLine("You chose option " + chosenOption);
+            break;
+        case 3:
+            Console.WriteLine("You chose option " + chosenOption);
+            break;
+        case 4:
+            Console.WriteLine("You chose option " + chosenOption);
+            break;
+        case -1:
+            Console.WriteLine("You chose option " + chosenOption);
+            Console.WriteLine(@"
+            ██╗░░░██╗░█████╗░██╗░░░░░███████╗░░░  ██████╗░███████╗██████╗░░██████╗░█████╗░███╗░░██╗░█████╗░██╗
+            ██║░░░██║██╔══██╗██║░░░░░██╔════╝░░░  ██╔══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗████╗░██║██╔══██╗██║
+            ╚██╗░██╔╝███████║██║░░░░░█████╗░░░░░  ██████╔╝█████╗░░██████╔╝╚█████╗░██║░░██║██╔██╗██║███████║██║
+            ░╚████╔╝░██╔══██║██║░░░░░██╔══╝░░██╗  ██╔═══╝░██╔══╝░░██╔══██╗░╚═══██╗██║░░██║██║╚████║██╔══██║╚═╝
+            ░░╚██╔╝░░██║░░██║███████╗███████╗╚█║  ██║░░░░░███████╗██║░░██║██████╔╝╚█████╔╝██║░╚███║██║░░██║██╗
+            ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝░╚╝  ╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝╚═╝");
+            break;
+        default:
+            Console.WriteLine("Invalid option");
+            break;
     }
-    else if (chosenOptionInt == 2)
-    {
-
-    }
-
-
 
 
 }

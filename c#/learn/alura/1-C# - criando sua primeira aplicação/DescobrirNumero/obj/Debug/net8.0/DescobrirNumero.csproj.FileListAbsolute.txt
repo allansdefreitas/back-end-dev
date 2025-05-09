@@ -1,0 +1,15 @@
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/bin/Debug/net8.0/DescobrirNumero
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/bin/Debug/net8.0/DescobrirNumero.deps.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/bin/Debug/net8.0/DescobrirNumero.runtimeconfig.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/bin/Debug/net8.0/DescobrirNumero.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/bin/Debug/net8.0/DescobrirNumero.pdb
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.GeneratedMSBuildEditorConfig.editorconfig
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.AssemblyInfoInputs.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.AssemblyInfo.cs
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.csproj.CoreCompileInputs.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.sourcelink.json
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/refint/DescobrirNumero.dll
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.pdb
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/DescobrirNumero.genruntimeconfig.cache
+/home/s105155494/github/allansdefreitas/back-end-dev/c#/learn/alura/1-C# - criando sua primeira aplicação/DescobrirNumero/obj/Debug/net8.0/ref/DescobrirNumero.dll

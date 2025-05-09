@@ -7,13 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalveMundus", "SalveMundus\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenSound", "ScreenSound\ScreenSound.csproj", "{56B7D9CC-3DD0-4905-B8C2-AFE8F87B6B72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DescobrirNumero", "DescobrirNumero\DescobrirNumero.csproj", "{E448CB45-5366-4394-85A2-50BEBFF6BB38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FEEDB261-74E3-48B0-943B-90D56AC37F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +23,12 @@ Global
 		{56B7D9CC-3DD0-4905-B8C2-AFE8F87B6B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56B7D9CC-3DD0-4905-B8C2-AFE8F87B6B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56B7D9CC-3DD0-4905-B8C2-AFE8F87B6B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E448CB45-5366-4394-85A2-50BEBFF6BB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E448CB45-5366-4394-85A2-50BEBFF6BB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E448CB45-5366-4394-85A2-50BEBFF6BB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E448CB45-5366-4394-85A2-50BEBFF6BB38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
