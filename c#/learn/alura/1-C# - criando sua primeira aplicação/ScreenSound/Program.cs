@@ -77,15 +77,21 @@ void InsertBand()
 void ListBands()
 {
 
+    Console.Clear();
     Console.WriteLine("************************************************");
     Console.WriteLine("Listing all bands");
     Console.WriteLine("************************************************");
-    for (int i = 0; i < bandsList.Count; i++)
+    // for (int i = 0; i < bandsList.Count; i++)
+    // {
+    //     Console.WriteLine($"{i + 1}. {bandsList[i]}");
+    // }
+
+    foreach (string band in bandsList)
     {
-        Console.WriteLine($"{i + 1}. {bandsList[i]}");
+        Console.WriteLine($"Band: {band}");
     }
 
-    Console.WriteLine("\bType any key to back to main menu");
+    Console.WriteLine("\nType any key to back to main menu");
     Console.ReadKey();
     Console.Clear();
     ShowMainMenu();
