@@ -56,14 +56,24 @@ void ShowMainMenu()
             Console.WriteLine("Invalid option");
             break;
     }
+}
 
+void ShowMenuTitle(string title)
+{
+
+    int lettersQuantity = title.Length;
+    string asterisks = string.Empty.PadLeft(lettersQuantity, '*');
+
+    Console.WriteLine(asterisks);
+    Console.WriteLine(title);
+    Console.WriteLine(asterisks + "\n");
 
 }
 
 void InsertBand()
 {
     Console.Clear();
-    Console.WriteLine("Insertion of band");
+    ShowMenuTitle("Insert a band");
     Console.WriteLine("Type the name of the band: ");
     string bandName = Console.ReadLine()!;
     bandsList.Add(bandName);
@@ -78,9 +88,7 @@ void ListBands()
 {
 
     Console.Clear();
-    Console.WriteLine("************************************************");
-    Console.WriteLine("Listing all bands");
-    Console.WriteLine("************************************************");
+    ShowMenuTitle("List bands");
     // for (int i = 0; i < bandsList.Count; i++)
     // {
     //     Console.WriteLine($"{i + 1}. {bandsList[i]}");
