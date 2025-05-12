@@ -1,6 +1,11 @@
-﻿void ShowWelcomeMessage()
+﻿using System.Text;
+
+string welcomeMessage = "Welcome to Screen Sound!";
+List<string> bandsList = new List<string> { "Arautos do Rei", "Prisma Brasil", "Banda e Orquestra Canaã" };
+
+
+void ShowLogo()
 {
-    string welcomeMessage = "Welcome to Screen Sound!";
 
     // got at https://fsymbols.com/
     Console.WriteLine(@"
@@ -15,8 +20,9 @@
 
 }
 
-void ShowOptionsMenu()
+void ShowMainMenu()
 {
+    ShowLogo();
     Console.WriteLine("\nType 1 to insert a band");
     Console.WriteLine("Type 2 to show all bands");
     Console.WriteLine("Type 3 to rate a band");
@@ -31,10 +37,10 @@ void ShowOptionsMenu()
     switch (chosenOptionInt)
     {
         case 1:
-            Console.WriteLine("You chose option " + chosenOption);
+            InsertBand();
             break;
         case 2:
-            Console.WriteLine("You chose option " + chosenOption);
+            ListBands();
             break;
         case 3:
             Console.WriteLine("You chose option " + chosenOption);
@@ -44,13 +50,7 @@ void ShowOptionsMenu()
             break;
         case -1:
             Console.WriteLine("You chose option " + chosenOption);
-            Console.WriteLine(@"
-            ██╗░░░██╗░█████╗░██╗░░░░░███████╗░░░  ██████╗░███████╗██████╗░░██████╗░█████╗░███╗░░██╗░█████╗░██╗
-            ██║░░░██║██╔══██╗██║░░░░░██╔════╝░░░  ██╔══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗████╗░██║██╔══██╗██║
-            ╚██╗░██╔╝███████║██║░░░░░█████╗░░░░░  ██████╔╝█████╗░░██████╔╝╚█████╗░██║░░██║██╔██╗██║███████║██║
-            ░╚████╔╝░██╔══██║██║░░░░░██╔══╝░░██╗  ██╔═══╝░██╔══╝░░██╔══██╗░╚═══██╗██║░░██║██║╚████║██╔══██║╚═╝
-            ░░╚██╔╝░░██║░░██║███████╗███████╗╚█║  ██║░░░░░███████╗██║░░██║██████╔╝╚█████╔╝██║░╚███║██║░░██║██╗
-            ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝░╚╝  ╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝╚═╝");
+            Console.WriteLine("Vale, persona!");
             break;
         default:
             Console.WriteLine("Invalid option");
@@ -60,8 +60,39 @@ void ShowOptionsMenu()
 
 }
 
-ShowWelcomeMessage();
-ShowOptionsMenu();
+void InsertBand()
+{
+    Console.Clear();
+    Console.WriteLine("Insertion of band");
+    Console.WriteLine("Type the name of the band: ");
+    string bandName = Console.ReadLine()!;
+    bandsList.Add(bandName);
+    Console.WriteLine($"The band {bandName} was inserted successfully!");
+    Thread.Sleep(2000);
+    Console.Clear();
+
+    ShowMainMenu();
+}
+
+void ListBands()
+{
+
+    Console.WriteLine("************************************************");
+    Console.WriteLine("Listing all bands");
+    Console.WriteLine("************************************************");
+    for (int i = 0; i < bandsList.Count; i++)
+    {
+        Console.WriteLine($"{i + 1}. {bandsList[i]}");
+    }
+
+    Console.WriteLine("\bType any key to back to main menu");
+    Console.ReadKey();
+    Console.Clear();
+    ShowMainMenu();
+}
+
+ShowMainMenu();
+Environment.Exit(0);
 
 
 
