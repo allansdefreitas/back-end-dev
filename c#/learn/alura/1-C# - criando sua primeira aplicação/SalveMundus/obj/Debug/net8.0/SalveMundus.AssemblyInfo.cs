@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SalveMundus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef8770c139ddf1e7cf15893b335e0ace9ea55d0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fa6f06e372518f96f374aa8a57dc8c596666659")]
 [assembly: System.Reflection.AssemblyProductAttribute("SalveMundus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SalveMundus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

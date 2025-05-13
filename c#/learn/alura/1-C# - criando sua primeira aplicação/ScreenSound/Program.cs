@@ -1,8 +1,12 @@
 ﻿using System.Text;
 
 string welcomeMessage = "Welcome to Screen Sound!";
-List<string> bandsList = new List<string> { "Arautos do Rei", "Prisma Brasil", "Banda e Orquestra Canaã" };
+//List<string> bandsList = new List<string> { "Arautos do Rei", "Prisma Brasil", "Banda e Orquestra Canaã" };
 
+Dictionary<string, List<int>> bandsAndRatingsDict = new Dictionary<string, List<int>>();
+bandsAndRatingsDict.Add("Voices", new List<int> { 10, 9, 7, 9 });
+bandsAndRatingsDict.Add("Arautos do Rei", new List<int>());
+bandsAndRatingsDict.Add("Musical Formosa", new List<int>());
 
 void ShowLogo()
 {
@@ -62,6 +66,8 @@ void ShowMenuTitle(string title)
 {
 
     int lettersQuantity = title.Length;
+
+    // It could be used PadRight too
     string asterisks = string.Empty.PadLeft(lettersQuantity, '*');
 
     Console.WriteLine(asterisks);
@@ -76,7 +82,10 @@ void InsertBand()
     ShowMenuTitle("Insert a band");
     Console.WriteLine("Type the name of the band: ");
     string bandName = Console.ReadLine()!;
-    bandsList.Add(bandName);
+
+    // In the moment of creation of a band, the list of ratings is empty
+    bandsAndRatingsDict.Add(bandName, new List<int>());
+
     Console.WriteLine($"The band {bandName} was inserted successfully!");
     Thread.Sleep(2000);
     Console.Clear();
@@ -94,7 +103,7 @@ void ListBands()
     //     Console.WriteLine($"{i + 1}. {bandsList[i]}");
     // }
 
-    foreach (string band in bandsList)
+    foreach (string band in bandsAndRatingsDict.Keys)
     {
         Console.WriteLine($"Band: {band}");
     }
