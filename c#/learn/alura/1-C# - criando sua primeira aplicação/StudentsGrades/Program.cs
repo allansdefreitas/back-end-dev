@@ -90,3 +90,18 @@ while (true)
 
 
 
+// Dictionary<string, List<double>> notasAlunos = new Dictionary<string, List<double>>();
+
+// // Adicione notas para alguns alunos
+// notasAlunos["João"] = new List<double> { 8.5, 9.0, 7.5 };
+// notasAlunos["Maria"] = new List<double> { 7.0, 8.0, 6.5 };
+
+// foreach (var aluno in notasAlunos)
+// {
+//     double soma = 0;
+//     for(int i = 0; i < aluno.Value.Count ; i++){
+//         soma += aluno.Value[i];
+//     }
+//     double media = soma / aluno.Value.Count;
+//     Console.WriteLine($"Média de {aluno.Key}: {media}");
+// }
