@@ -57,14 +57,16 @@ void ShowMainMenu()
             break;
 
         case 5:
-            ListAllBandRatings();
+            ListRatingsAllBands();
             break;
         case -1:
-            Console.WriteLine("You chose option " + chosenOption);
             Console.WriteLine("Vale, persona!");
+            Thread.Sleep(2000);
+            Environment.Exit(0);
             break;
         default:
             Console.WriteLine("Invalid option");
+            Thread.Sleep(2000);
             break;
     }
 }
@@ -96,7 +98,6 @@ void InsertBand()
     Console.WriteLine($"The band {bandName} was inserted successfully!");
     Thread.Sleep(2000);
     Console.Clear();
-
     ShowMainMenu();
 }
 
@@ -115,10 +116,12 @@ void ListBands()
         Console.WriteLine($"Band: {band}");
     }
 
-    Console.WriteLine("\nType any key to back to main menu");
-    Console.ReadKey();
-    Console.Clear();
-    ShowMainMenu();
+    // foreach (string band in bandsAndRatingsDict.Keys.OrderBy(key => key))
+    // {
+    //     Console.WriteLine($"Band: {band}");
+    // }
+
+    WaitUserConfirmation();
 }
 
 void RateABand()
@@ -136,18 +139,16 @@ void RateABand()
 
         bandsAndRatingsDict[bandName].Add(bandRateInt);
         Console.WriteLine($"The band '{bandName}'was rated successfully!");
-        Thread.Sleep(2000);
-        Console.Clear();
-        ShowMainMenu();
+
     }
     else
     {
         Console.WriteLine($"The band '{bandName}' does was not found!");
-        Console.WriteLine("\nType any key to back to main menu");
-        Console.ReadKey();
-        Console.Clear();
-        ShowMainMenu();
     }
+
+    Thread.Sleep(2000);
+    Console.Clear();
+    ShowMainMenu();
 }
 
 void ListAverageRatingOfABand()
@@ -159,8 +160,6 @@ void ListAverageRatingOfABand()
 
     if (bandsAndRatingsDict.ContainsKey(bandName))
     {
-
-
         List<int> ratingsList = bandsAndRatingsDict[bandName];
         double bandAverageRating = ratingsList.Average();
 
@@ -172,15 +171,11 @@ void ListAverageRatingOfABand()
         Console.WriteLine($"The band '{bandName}' does not exist!");
     }
 
-
-
-
-
-
+    WaitUserConfirmation();
 }
 
 
-void ListAllBandRatings()
+void ListRatingsAllBands()
 {
     Console.Clear();
     ShowMenuTitle("List band ratings");
@@ -201,14 +196,27 @@ void ListAllBandRatings()
         }
         else
         {
-            Console.WriteLine("The band has not ratings yet!");
+            Console.WriteLine("The band has not ratings yet!\n");
         }
     }
 
+    WaitUserConfirmation();
+
 }
 
-ShowMainMenu();
-Environment.Exit(0);
+void WaitUserConfirmation()
+{
+    Console.WriteLine("\nType any key to back to main menu");
+    Console.ReadKey();
+    Console.Clear();
+    ShowMainMenu();
+}
+
+while (true)
+{
+    ShowMainMenu();
+}
+
 
 
 
