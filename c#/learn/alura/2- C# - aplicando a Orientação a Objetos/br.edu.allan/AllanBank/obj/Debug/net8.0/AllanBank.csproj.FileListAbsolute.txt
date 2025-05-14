@@ -1,0 +1,15 @@
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\bin\Debug\net8.0\AllanBank.exe
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\bin\Debug\net8.0\AllanBank.deps.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\bin\Debug\net8.0\AllanBank.runtimeconfig.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\bin\Debug\net8.0\AllanBank.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\bin\Debug\net8.0\AllanBank.pdb
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.AssemblyInfoInputs.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.AssemblyInfo.cs
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.csproj.CoreCompileInputs.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.sourcelink.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\refint\AllanBank.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.pdb
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\AllanBank.genruntimeconfig.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\AllanBank\obj\Debug\net8.0\ref\AllanBank.dll

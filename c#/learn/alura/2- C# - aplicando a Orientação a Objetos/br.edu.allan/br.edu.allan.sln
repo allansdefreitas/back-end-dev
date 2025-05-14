@@ -1,0 +1,30 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenSoundObj", "ScreenSoundObj\ScreenSoundObj.csproj", "{F87158E9-C3A9-F76E-2D68-E76B8092EB8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllanBank", "AllanBank\AllanBank.csproj", "{2CA0D502-8479-46CB-A079-BDE0F2009B23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F87158E9-C3A9-F76E-2D68-E76B8092EB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87158E9-C3A9-F76E-2D68-E76B8092EB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87158E9-C3A9-F76E-2D68-E76B8092EB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87158E9-C3A9-F76E-2D68-E76B8092EB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA0D502-8479-46CB-A079-BDE0F2009B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA0D502-8479-46CB-A079-BDE0F2009B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA0D502-8479-46CB-A079-BDE0F2009B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA0D502-8479-46CB-A079-BDE0F2009B23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF14B7C0-3D35-4315-BBDE-771E6A629396}
+	EndGlobalSection
+EndGlobal
