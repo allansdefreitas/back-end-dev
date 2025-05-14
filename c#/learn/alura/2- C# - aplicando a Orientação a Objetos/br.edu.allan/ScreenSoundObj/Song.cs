@@ -1,10 +1,9 @@
 class Song
 {
-    public string title;
-    public string artist;
-    public int duration;
-    public bool isAvailableInPlann;
-
+    public string title {get; set;}
+    public string artist {get; set;}
+    public int duration {get; set;}
+    public bool isAvailableInPlann {get; set;}
 
     public void ShowTechnicalSheet(){
 
