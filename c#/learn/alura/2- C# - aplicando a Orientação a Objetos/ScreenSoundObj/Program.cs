@@ -1,6 +1,5 @@
 ﻿
 Console.Clear();
-Console.WriteLine("Hello, World!");
 
 Song song1 = new Song();
 
@@ -10,3 +9,7 @@ Console.WriteLine(song1);
 Song song2 = new Song();
 song2.title = "Rompendo em Fé";
 Console.WriteLine(song2);
+
+song1.ShowTechnicalSheet();
+Console.WriteLine();
+song2.ShowTechnicalSheet();
