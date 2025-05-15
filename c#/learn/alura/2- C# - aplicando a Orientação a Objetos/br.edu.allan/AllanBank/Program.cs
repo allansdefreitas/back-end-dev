@@ -4,9 +4,9 @@ Console.Clear();
 
 Account account= new Account();
 
-account.numeroIndicador = 123;
-account.titular = "Allan";
-account.saldo = 10000;
-account.senha = "12345";
+account.NumeroIndicador = 123;
+account.Titular = "Allan";
+account.Saldo = 10000;
+account.Senha = "12345";
 
 account.ExibirDadosConta();

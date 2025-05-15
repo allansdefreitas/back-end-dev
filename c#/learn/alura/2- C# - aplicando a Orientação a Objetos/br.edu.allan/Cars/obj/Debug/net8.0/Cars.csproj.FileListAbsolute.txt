@@ -1,0 +1,15 @@
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\bin\Debug\net8.0\Cars.exe
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\bin\Debug\net8.0\Cars.deps.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\bin\Debug\net8.0\Cars.runtimeconfig.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\bin\Debug\net8.0\Cars.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\bin\Debug\net8.0\Cars.pdb
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.AssemblyInfoInputs.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.AssemblyInfo.cs
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.csproj.CoreCompileInputs.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.sourcelink.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\refint\Cars.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.pdb
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\Cars.genruntimeconfig.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\Cars\obj\Debug\net8.0\ref\Cars.dll
