@@ -22,3 +22,7 @@ foreach (int numero in numerosPares)
 numerosPares = numeros.FindAll(numero => numero % 2 == 0);
 
 numerosPares.ForEach(numero => Console.WriteLine(numero));
+
+
+// ================================
+//https://www.youtube.com/watch?v=jIwa5tT32oU
