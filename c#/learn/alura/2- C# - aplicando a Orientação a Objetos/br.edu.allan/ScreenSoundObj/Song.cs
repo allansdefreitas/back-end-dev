@@ -1,19 +1,23 @@
 class Song
 {
-    public string Title {get; set;}
+    public string Title {get; set;} // This is a PROPERTY (Propriedade), pois define mecanismo de acesso e manipulação (get; set). Usa PascalCase
     public string Artist {get; set;}
     public int Duration {get; set;}
     public bool IsAvailableInPlann {get; set;}
+
+    private float ImdbRating; // This is a FIELD (Atributo). Usa camelCAse. Melhor ser privado
 
     // short version. read only. Called arrow function or Lambda in C#
     //public string SummarizedDescription => 
     //    $"The song \"{Title}\" belongs to the artist \"{Artist}\" and has a duration of about {Duration} minutes";
 
-    public string SummarizedDescription { 
-        
-        get{
+    public string SummarizedDescription
+    {
+
+        get
+        {
             return $"The song \"{Title}\" belongs to the artist \"{Artist}\" and has a duration of about {Duration} minutes";
-        } 
+        }
     }
 
     public void ShowTechnicalSheet(){

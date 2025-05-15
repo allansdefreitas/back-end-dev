@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\ScreenSoundObj\\ScreenSoundObj.csproj",
         "projectName": "ScreenSoundObj",
         "projectPath": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\ScreenSoundObj\\ScreenSoundObj.csproj",
-        "packagesPath": "C:\\Users\\allan\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\s105155494\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\ScreenSoundObj\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\allan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\s105155494\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

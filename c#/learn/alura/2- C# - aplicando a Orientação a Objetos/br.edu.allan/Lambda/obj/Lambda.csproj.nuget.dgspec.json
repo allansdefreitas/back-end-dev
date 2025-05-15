@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\AllanBank\\AllanBank.csproj": {}
+    "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\Lambda\\Lambda.csproj": {}
   },
   "projects": {
-    "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\AllanBank\\AllanBank.csproj": {
+    "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\Lambda\\Lambda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\AllanBank\\AllanBank.csproj",
-        "projectName": "AllanBank",
-        "projectPath": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\AllanBank\\AllanBank.csproj",
+        "projectUniqueName": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\Lambda\\Lambda.csproj",
+        "projectName": "Lambda",
+        "projectPath": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\Lambda\\Lambda.csproj",
         "packagesPath": "C:\\Users\\s105155494\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\AllanBank\\obj\\",
+        "outputPath": "C:\\dev\\github.com\\allansdefreitas\\back-end-dev\\c#\\learn\\alura\\2- C# - aplicando a Orientação a Objetos\\br.edu.allan\\Lambda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\s105155494\\AppData\\Roaming\\NuGet\\NuGet.Config"
