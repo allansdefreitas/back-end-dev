@@ -10,8 +10,6 @@ Console.Clear();
 Estoque estoqueMercadinhoAlfa = new Estoque();
 estoqueMercadinhoAlfa.Nome = "Estoque do Mercadinho Alfa";
 
-
-
 Produto produtoGranola = new Produto();
 produtoGranola.Nome = "Granola sem Glúten";
 produtoGranola.Marca = "São Braz";

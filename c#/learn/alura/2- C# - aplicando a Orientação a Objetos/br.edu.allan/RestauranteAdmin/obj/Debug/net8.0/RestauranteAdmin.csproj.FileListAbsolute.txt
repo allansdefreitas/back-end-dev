@@ -1,0 +1,15 @@
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\bin\Debug\net8.0\RestauranteAdmin.exe
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\bin\Debug\net8.0\RestauranteAdmin.deps.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\bin\Debug\net8.0\RestauranteAdmin.runtimeconfig.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\bin\Debug\net8.0\RestauranteAdmin.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\bin\Debug\net8.0\RestauranteAdmin.pdb
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.AssemblyInfoInputs.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.AssemblyInfo.cs
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.csproj.CoreCompileInputs.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.sourcelink.json
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\refint\RestauranteAdmin.dll
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.pdb
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\RestauranteAdmin.genruntimeconfig.cache
+C:\dev\github.com\allansdefreitas\back-end-dev\c#\learn\alura\2- C# - aplicando a Orientação a Objetos\br.edu.allan\RestauranteAdmin\obj\Debug\net8.0\ref\RestauranteAdmin.dll
