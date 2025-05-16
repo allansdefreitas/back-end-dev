@@ -1,20 +1,22 @@
 ﻿
 Console.Clear();
 
-Song song1 = new Song();
+Album albumOzeiasDePaula = new Album();
 
-song1.Title = "Conclusões";
-Console.WriteLine(song1); // //Show the class 
+
+albumOzeiasDePaula.Title = "Cem Ovelhas";
+Song song = new Song();
+song.Title = "Tu me guiarás";
+song.DurationInSeconds = 210;
 
 Song song2 = new Song();
-song2.Title = "Rompendo em Fé";
-song2.Artist = "Elizeu Gomes";
-song2.Duration = 4;
+song2.Title = "Hoje eu sou feliz";
+song2.DurationInSeconds = 277;
 
-song1.ShowTechnicalSheet();
-Console.WriteLine();
-song2.ShowTechnicalSheet();
-song2.ShowTitleAndArtist();
+albumOzeiasDePaula.AddSong(song);
+albumOzeiasDePaula.AddSong(song2);
 
-Console.WriteLine("Summarized description: {0}", song2.SummarizedDescription);
+albumOzeiasDePaula.ShowAlbum();
+
+
 

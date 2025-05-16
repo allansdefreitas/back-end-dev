@@ -1,9 +1,9 @@
 class Song
 {
-    public string Title {get; set;} // This is a PROPERTY (Propriedade), pois define mecanismo de acesso e manipulação (get; set). Usa PascalCase
-    public string Artist {get; set;}
-    public int Duration {get; set;}
-    public bool IsAvailableInPlann {get; set;}
+    public string Title { get; set; } // This is a PROPERTY (Propriedade), pois define mecanismo de acesso e manipulação (get; set). Usa PascalCase
+    public string Artist { get; set; }
+    public int DurationInSeconds { get; set; }
+    public bool IsAvailableInPlann { get; set; }
 
     private float ImdbRating; // This is a FIELD (Atributo). Usa camelCAse. Melhor ser privado
 
@@ -16,15 +16,16 @@ class Song
 
         get
         {
-            return $"The song \"{Title}\" belongs to the artist \"{Artist}\" and has a duration of about {Duration} minutes";
+            return $"The song \"{Title}\" belongs to the artist \"{Artist}\" and has a duration of about {DurationInSeconds} minutes";
         }
     }
 
-    public void ShowTechnicalSheet(){
+    public void ShowTechnicalSheet()
+    {
 
         Console.WriteLine($"Title: {Title}");
         Console.WriteLine($"Artist: {Artist}");
-        Console.WriteLine($"Duration: {Duration}");
+        Console.WriteLine($"Duration: {DurationInSeconds}");
         Console.WriteLine($"Available in plan: {IsAvailableInPlann}");
     }
 
