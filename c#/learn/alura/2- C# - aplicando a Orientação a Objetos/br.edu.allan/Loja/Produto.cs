@@ -1,10 +1,9 @@
-class Produto
+public class Produto
 {
     private double preco;
     private int estoque;
     public string Nome { get; set; }
     public string Marca { get; set; }
-
 
 
     public double Preco
@@ -14,7 +13,6 @@ class Produto
         {
             if (value > 0)
             {
-                Console.WriteLine("Preço válido");
                 preco = value;
             }
             else
@@ -38,6 +36,7 @@ class Produto
         }
     }
 
-    public string DescricaoProduto => $"{this.Nome} {this.Marca} - {this.Preco}";
+    public string DescricaoProduto => $"{this.Nome} {this.Marca} - R$ {this.Preco}";
+
 
 }

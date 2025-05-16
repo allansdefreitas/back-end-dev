@@ -2,10 +2,13 @@
 Console.Clear();
 
 
-Account account= new Account();
+Account account = new Account();
+Titular titularAllan = new Titular();
+titularAllan.Nome = "Allan";
 
 account.NumeroIndicador = 123;
-account.Titular = "Allan";
+
+account.Titular = titularAllan;
 account.Saldo = 10000;
 account.Senha = "12345";
 
