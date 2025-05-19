@@ -2,11 +2,16 @@ public class Album
 {
 
     private List<Song> songs;
-    public string Title { get; set; }
+    public string Title { get; }
     public int ReleaseYear { get; set; }
 
     // Sum the total time of the songs 
     public int DurationInSeconds => this.songs.Sum(s => s.DurationInSeconds);
+
+    public Album(string title)
+    {
+        this.Title = title;
+    }
 
     public void AddSong(Song song)
     {

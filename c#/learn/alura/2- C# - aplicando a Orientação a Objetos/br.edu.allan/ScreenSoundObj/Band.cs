@@ -1,11 +1,13 @@
 public class Band
 {
-    public string Name { get; set; }
+    public string Name { get; }
 
     private List<Album> albumns;
 
-    public Band()
+
+    public Band(string name)
     {
+        this.Name = name;
         this.albumns = new List<Album>();
     }
 
