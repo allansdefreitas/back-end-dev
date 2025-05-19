@@ -90,7 +90,6 @@ Console.WriteLine();
 bandOzeiasDePaula.showDiscography();
 
 
-albumOAmorETudo.son
 
 
 

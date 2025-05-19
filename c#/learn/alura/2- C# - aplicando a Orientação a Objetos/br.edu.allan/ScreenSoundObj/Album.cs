@@ -1,7 +1,7 @@
 public class Album
 {
 
-    private List<Song> songs;
+    public List<Song> Songs { get; }
     public string Title { get; }
     public int ReleaseYear { get; set; }
 
@@ -10,7 +10,7 @@ public class Album
     public int DurationInSeconds
     {
         get =>
-            this.songs.Sum(s => s.DurationInSeconds);
+            this.Songs.Sum(s => s.DurationInSeconds);
         set
         {
             DurationInSeconds = value;
@@ -19,13 +19,13 @@ public class Album
 
     public Album(string title)
     {
+        this.Songs = new List<Song>();
         this.Title = title;
     }
 
     public void AddSong(Song song)
     {
-        this.songs = new List<Song>();
-        this.songs.Add(song);
+        this.Songs.Add(song);
     }
 
     public void ShowAlbum()
@@ -40,9 +40,9 @@ public class Album
 
         // Console.WriteLine("ALBUM: {0}", this.Title.ToUpper());
 
-        for (int i = 0; i < this.songs.Count; i++)
+        for (int i = 0; i < this.Songs.Count; i++)
         {
-            Song ithSong = songs[i];
+            Song ithSong = Songs[i];
             Console.WriteLine($"1. {ithSong.Title}");
         }
         // Console.WriteLine($"The album {this.Title} ({this.ReleaseYear}) - {durationInMinutes} min.");
