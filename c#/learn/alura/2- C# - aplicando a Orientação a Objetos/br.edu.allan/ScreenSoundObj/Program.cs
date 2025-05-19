@@ -169,4 +169,16 @@ Console.WriteLine();
 
 userAllan.ShowPlaylists();
 
+Console.Clear();
+
+/* Exercícios ------------------------------------------------------- */
+Episodio episodio = new Episodio(1, "\"Como programar em C#\"", 45);
+
+Convidado allan = new Convidado("Allan");
+Convidado mike = new Convidado("Mike");
+episodio.AdicionarConvidado(allan);
+episodio.AdicionarConvidado(mike);
+
+
+Console.WriteLine(episodio.Resumo);
 
