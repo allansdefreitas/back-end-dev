@@ -6,7 +6,16 @@ public class Album
     public int ReleaseYear { get; set; }
 
     // Sum the total time of the songs 
-    public int DurationInSeconds => this.songs.Sum(s => s.DurationInSeconds);
+    // public int DurationInSeconds => this.songs.Sum(s => s.DurationInSeconds);
+    public int DurationInSeconds
+    {
+        get =>
+            this.songs.Sum(s => s.DurationInSeconds);
+        set
+        {
+            DurationInSeconds = value;
+        }
+    }
 
     public Album(string title)
     {

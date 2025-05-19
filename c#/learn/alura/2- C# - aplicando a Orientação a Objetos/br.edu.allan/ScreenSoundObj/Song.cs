@@ -24,16 +24,17 @@ public class Song
     {
         get
         {
-            return $"The song \"{Title}\" belongs to the artist \"{Artist}\", has a gender of {Genre} and has a duration of about {DurationInSeconds} minutes";
+            return $"The song \"{Title}\" belongs to the artist \"{Artist}\", has a gender of {Genre} and has a duration of about {DurationInSeconds / 60} minutes";
         }
     }
 
     public void ShowTechnicalSheet()
     {
+        float durationInMinutes = (float)(this.DurationInSeconds / 60);
 
         Console.WriteLine($"Title: {Title}");
         Console.WriteLine($"Artist: {Artist.Name}");
-        Console.WriteLine($"Duration: {DurationInSeconds}");
+        Console.WriteLine($"Duration: {durationInMinutes} min.");
         Console.WriteLine($"Available in plan: {IsAvailableInPlann}");
     }
 
@@ -41,8 +42,6 @@ public class Song
     {
         Console.WriteLine($"Title/Artist: {Title} - {Artist}");
     }
-
-
 
 }
 
