@@ -3,6 +3,7 @@ public class Album
 
     private List<Song> songs;
     public string Title { get; set; }
+    public int ReleaseYear { get; set; }
 
     // Sum the total time of the songs 
     public int DurationInSeconds => this.songs.Sum(s => s.DurationInSeconds);
@@ -15,7 +16,7 @@ public class Album
 
     public void ShowAlbum()
     {
-        Console.WriteLine($"Songs of album {this.Title}");
+        Console.WriteLine($"Songs of album {this.Title} ({this.ReleaseYear})");
 
         // foreach (var song in this.songs)
         // {
@@ -30,7 +31,7 @@ public class Album
             Console.WriteLine($"1. {ithSong.Title}");
         }
         float durationInMinutes = (float)(this.DurationInSeconds / 60);
-        Console.WriteLine($"The album {this.Title} ({durationInMinutes} min.");
+        Console.WriteLine($"The album {this.Title} ({this.ReleaseYear}) - {durationInMinutes} min.");
     }
 
 

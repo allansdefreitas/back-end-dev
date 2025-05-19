@@ -23,7 +23,7 @@ public class Band
         {
             float albumDurationInMinutes = (float)(album.DurationInSeconds / 60);
 
-            Console.WriteLine($"Album: \"{album.Title}\" ({albumDurationInMinutes} min.)");
+            Console.WriteLine($"Album: \"{album.Title}\" ({album.ReleaseYear}) - {albumDurationInMinutes} min.");
         }
 
     }

@@ -1,11 +1,17 @@
 public class Song
 {
     public string Title { get; set; } // This is a PROPERTY (Propriedade), pois define mecanismo de acesso e manipulação (get; set). Usa PascalCase
-    public string Artist { get; set; }
+    public Band Artist { get; }
 
     public Gnere Genre { get; set; }
     public int DurationInSeconds { get; set; }
     public bool IsAvailableInPlann { get; set; }
+
+    public Song(Band artist)
+    {
+        this.Artist = artist;
+    }
+
 
     private float ImdbRating; // This is a FIELD (Atributo). Usa camelCAse. Melhor ser privado
 
