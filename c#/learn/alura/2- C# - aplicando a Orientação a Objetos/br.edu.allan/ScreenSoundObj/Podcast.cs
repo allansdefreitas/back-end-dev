@@ -1,15 +1,16 @@
 public class Podcast
 {
 
-    private string host;
-    private string nome;
+    public string Host { get; }
+    public string Nome { get; }
 
     private List<Episodio> episodios;
 
     public Podcast(string host, string nome)
     {
-        host = host;
-        nome = nome;
+        episodios = new List<Episodio>();
+        Host = host;
+        Nome = nome;
     }
 
     public void AdicionarEpisodio(Episodio episodio)
@@ -19,15 +20,14 @@ public class Podcast
 
     public void ExibirDetalhes()
     {
-        Console.WriteLine($"{nome} ({host})");
+        Console.WriteLine($"\n{Nome} - ({Host})\n");
 
-        for (int i = 0; i < episodios.Count; i++)
+        foreach (var episodio in episodios.OrderBy(e => e.Ordem))
         {
-            Episodio ithEpisodio = episodios[i];
-            Console.WriteLine(ithEpisodio.Resumo);
+            Console.WriteLine(episodio.Resumo);
         }
 
-        Console.WriteLine($"Total de episódios: {episodios.Count}");
+        Console.WriteLine($"\nTotal de episódios: {episodios.Count}");
 
     }
 

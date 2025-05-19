@@ -172,13 +172,26 @@ userAllan.ShowPlaylists();
 Console.Clear();
 
 /* Exercícios ------------------------------------------------------- */
-Episodio episodio = new Episodio(1, "\"Como programar em C#\"", 45);
+Episodio episodioCsharp = new Episodio(2, "\"Como programar em C#\"", 45);
+
+Episodio episodioJavaCSharp = new Episodio(1, "\"Semelhanças e diferenças entre C# e Java\"", 47);
 
 Convidado allan = new Convidado("Allan");
 Convidado mike = new Convidado("Mike");
-episodio.AdicionarConvidado(allan);
-episodio.AdicionarConvidado(mike);
+episodioCsharp.AdicionarConvidado(allan);
+episodioCsharp.AdicionarConvidado(mike);
+
+episodioJavaCSharp.AdicionarConvidado(allan);
 
 
-Console.WriteLine(episodio.Resumo);
+Console.WriteLine(episodioCsharp.Resumo);
+
+
+Podcast allanCsharpCast = new Podcast("Allan", "AllanCsharpCast");
+allanCsharpCast.AdicionarEpisodio(episodioCsharp);
+allanCsharpCast.AdicionarEpisodio(episodioJavaCSharp);
+
+allanCsharpCast.ExibirDetalhes();
+
+
 
