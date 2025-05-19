@@ -3,6 +3,8 @@ public class Song
     public string Title { get; set; } // This is a PROPERTY (Propriedade), pois define mecanismo de acesso e manipulação (get; set). Usa PascalCase
     public Band Artist { get; }
 
+    public SongLyrics Lyrics { get; set; }
+
     public Genre Genre { get; set; }
     public int DurationInSeconds { get; set; }
     public bool IsAvailableInPlann { get; set; }
