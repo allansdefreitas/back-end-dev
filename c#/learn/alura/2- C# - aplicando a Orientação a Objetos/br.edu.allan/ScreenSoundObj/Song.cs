@@ -32,7 +32,7 @@ public class Song
     {
 
         Console.WriteLine($"Title: {Title}");
-        Console.WriteLine($"Artist: {Artist}");
+        Console.WriteLine($"Artist: {Artist.Name}");
         Console.WriteLine($"Duration: {DurationInSeconds}");
         Console.WriteLine($"Available in plan: {IsAvailableInPlann}");
     }

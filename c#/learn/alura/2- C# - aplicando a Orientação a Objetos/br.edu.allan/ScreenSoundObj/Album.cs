@@ -21,22 +21,22 @@ public class Album
 
     public void ShowAlbum()
     {
-        Console.WriteLine($"Songs of album {this.Title} ({this.ReleaseYear})");
+        float durationInMinutes = (float)(this.DurationInSeconds / 60);
+        Console.WriteLine($"\"{this.Title}\" ({this.ReleaseYear}) - {durationInMinutes} min.");
 
         // foreach (var song in this.songs)
         // {
         //     Console.WriteLine($"Song: {song.Title}");
         // }
 
-        Console.WriteLine("ALBUM: {0}", this.Title.ToUpper());
+        // Console.WriteLine("ALBUM: {0}", this.Title.ToUpper());
 
         for (int i = 0; i < this.songs.Count; i++)
         {
             Song ithSong = songs[i];
             Console.WriteLine($"1. {ithSong.Title}");
         }
-        float durationInMinutes = (float)(this.DurationInSeconds / 60);
-        Console.WriteLine($"The album {this.Title} ({this.ReleaseYear}) - {durationInMinutes} min.");
+        // Console.WriteLine($"The album {this.Title} ({this.ReleaseYear}) - {durationInMinutes} min.");
     }
 
 
