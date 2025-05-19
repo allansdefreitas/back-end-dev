@@ -7,10 +7,22 @@ public class Account
     public Titular Titular { get; set; }
     public float Saldo { get; set; }
     public string Senha { get; set; }
+    public double Limite { get; set; }
+
+    public string Informacoes => $"Conta nº {this.NumeroIndicador}, Agência {this.Agencia}, Titular: {this.Titular.Nome} - Saldo: {this.Saldo}";
 
     public Account()
     {
         this.Titular = new Titular();
+    }
+
+    public Account(Titular titular, string agencia, int numeroIndicador, double limite)
+    {
+        this.Titular = titular;
+        this.Agencia = agencia;
+        this.NumeroIndicador = numeroIndicador;
+        this.Limite = limite;
+        this.Saldo = 0;
     }
 
     public void ExibirDadosConta()
