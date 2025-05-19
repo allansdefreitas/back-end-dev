@@ -1,7 +1,7 @@
-class Album
+public class Album
 {
 
-    private List<Song> songs = new List<Song>();
+    private List<Song> songs;
     public string Title { get; set; }
 
     // Sum the total time of the songs 
@@ -9,6 +9,7 @@ class Album
 
     public void AddSong(Song song)
     {
+        this.songs = new List<Song>();
         this.songs.Add(song);
     }
 
@@ -29,7 +30,7 @@ class Album
             Console.WriteLine($"1. {ithSong.Title}");
         }
         float durationInMinutes = (float)(this.DurationInSeconds / 60);
-        Console.WriteLine($"The album {this.Title} lasts about {durationInMinutes} minutes.");
+        Console.WriteLine($"The album {this.Title} ({durationInMinutes} min.");
     }
 
 

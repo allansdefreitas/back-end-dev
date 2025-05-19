@@ -1,7 +1,9 @@
-class Song
+public class Song
 {
     public string Title { get; set; } // This is a PROPERTY (Propriedade), pois define mecanismo de acesso e manipulação (get; set). Usa PascalCase
     public string Artist { get; set; }
+
+    public Gnere Genre { get; set; }
     public int DurationInSeconds { get; set; }
     public bool IsAvailableInPlann { get; set; }
 
@@ -13,10 +15,9 @@ class Song
 
     public string SummarizedDescription
     {
-
         get
         {
-            return $"The song \"{Title}\" belongs to the artist \"{Artist}\" and has a duration of about {DurationInSeconds} minutes";
+            return $"The song \"{Title}\" belongs to the artist \"{Artist}\", has a gender of {Genre} and has a duration of about {DurationInSeconds} minutes";
         }
     }
 
