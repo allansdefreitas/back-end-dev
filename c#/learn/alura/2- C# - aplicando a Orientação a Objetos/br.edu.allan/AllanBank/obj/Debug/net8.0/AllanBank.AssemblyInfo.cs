@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AllanBank")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+318afd28bcdf82c68dcd8d7d499f458360d4d339")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4e4f5dca606b9aef0e3798e099df465a5088335")]
 [assembly: System.Reflection.AssemblyProductAttribute("AllanBank")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AllanBank")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
