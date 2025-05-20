@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlataformaNamespace")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dc6c9f2e8429b749f5980ec9f3b9c3ed5e3407c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f0a5274d13167d13dac82a72f0485004b5441ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlataformaNamespace")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlataformaNamespace")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

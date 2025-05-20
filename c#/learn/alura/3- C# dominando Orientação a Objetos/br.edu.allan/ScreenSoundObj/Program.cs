@@ -8,9 +8,9 @@ internal class Program
         Dictionary<string, Banda> bandasRegistradas = new Dictionary<string, Banda>();
 
         Banda bandaJacira = new("Jacira"); // Poderia ser Banda bandaJacira = new("Jacira");
-        Avaliacao avaliacao = new(10);
+        Avaliacao avaliacao = new(-1);
         bandaJacira.AdicionarNota(avaliacao);
-        bandaJacira.AdicionarNota(new Avaliacao(8));
+        bandaJacira.AdicionarNota(new Avaliacao(11));
         bandaJacira.AdicionarNota(new Avaliacao(9));
 
         Banda bandaVictorinoSilva = new Banda("Victorino Silva");
