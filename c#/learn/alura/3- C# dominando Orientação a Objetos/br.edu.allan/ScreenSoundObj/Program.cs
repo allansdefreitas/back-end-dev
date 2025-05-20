@@ -4,14 +4,15 @@ using ScreenSoundObj.Modelos;
 Dictionary<string, Banda> bandasRegistradas = new Dictionary<string, Banda>();
 
 Banda bandaJacira = new("Jacira"); // Poderia ser Banda bandaJacira = new("Jacira");
-bandaJacira.AdicionarNota(10);
-bandaJacira.AdicionarNota(9);
-bandaJacira.AdicionarNota(8);
+Avaliacao avaliacao = new(10);
+bandaJacira.AdicionarNota(avaliacao);
+bandaJacira.AdicionarNota(new Avaliacao(8)); 
+bandaJacira.AdicionarNota(new Avaliacao(9));
 
 Banda bandaVictorinoSilva = new Banda("Victorino Silva");
-bandaVictorinoSilva.AdicionarNota(10);
-bandaVictorinoSilva.AdicionarNota(8);
-bandaVictorinoSilva.AdicionarNota(8);
+bandaVictorinoSilva.AdicionarNota(new Avaliacao(10));
+bandaVictorinoSilva.AdicionarNota(new Avaliacao(10));
+bandaVictorinoSilva.AdicionarNota(new Avaliacao(9));
 
 bandasRegistradas.Add(bandaJacira.Nome, bandaJacira);
 bandasRegistradas.Add(bandaVictorinoSilva.Nome, bandaVictorinoSilva);
@@ -151,15 +152,18 @@ void AvaliarUmaBanda()
     ExibirTituloDaOpcao("Avaliar banda");
     Console.Write("Digite o nome da banda que deseja avaliar: ");
     string nomeDaBanda = Console.ReadLine()!;
+
     if (bandasRegistradas.ContainsKey(nomeDaBanda))
     {
         Banda bandaAvaliada = bandasRegistradas[nomeDaBanda];
 
         Console.Write($"Qual a nota que a banda {bandaAvaliada.Nome} merece: ");
-        int nota = int.Parse(Console.ReadLine()!);
-        bandaAvaliada.AdicionarNota(nota);
+        string notaString = Console.ReadLine()!;
 
-        Console.WriteLine($"\nA nota {nota} foi registrada com sucesso para a banda {bandaAvaliada.Nome}");
+        Avaliacao avaliacao = Avaliacao.Parse(notaString);
+        bandaAvaliada.AdicionarNota(avaliacao);
+
+        Console.WriteLine($"\nA nota {avaliacao.Nota} foi registrada com sucesso para a banda {bandaAvaliada.Nome}");
         Thread.Sleep(2000);
         Console.Clear();
         ExibirOpcoesDoMenu();
@@ -186,7 +190,7 @@ void ExibirDetalhes()
     {
         Banda bandaSelecionada = bandasRegistradas[nomeDaBanda];
 
-        Console.WriteLine($"\nA média da banda {bandaSelecionada} é {bandaSelecionada.Media}.");
+        Console.WriteLine($"\nA média da banda \"{bandaSelecionada.Nome}\" é {bandaSelecionada.Media}.");
         /**
         * ESPAÇO RESERVADO PARA COMPLETAR A FUNÇÃO
         */
