@@ -146,6 +146,7 @@ void ExibirTituloDaOpcao(string titulo)
     Console.WriteLine(asteriscos + "\n");
 }
 
+//teste
 void AvaliarUmaBanda()
 {
     Console.Clear();
