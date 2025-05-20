@@ -1,6 +1,6 @@
 ﻿namespace Edu.Allan.ScreenSoundObj.Modelos;
 
-class Banda
+internal class Banda
 {
     private List<Album> albuns;
     private List<int> notas;
