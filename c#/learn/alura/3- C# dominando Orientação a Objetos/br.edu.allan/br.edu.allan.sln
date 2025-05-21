@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop", "PetShop\PetShop.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OficinaAuto", "OficinaAuto\OficinaAuto.csproj", "{9F38A841-AD8E-482D-8649-41B2C63A370A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{9F38A841-AD8E-482D-8649-41B2C63A370A}.Release|x64.Build.0 = Release|Any CPU
 		{9F38A841-AD8E-482D-8649-41B2C63A370A}.Release|x86.ActiveCfg = Release|Any CPU
 		{9F38A841-AD8E-482D-8649-41B2C63A370A}.Release|x86.Build.0 = Release|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Debug|x64.Build.0 = Debug|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Debug|x86.Build.0 = Debug|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Release|x64.ActiveCfg = Release|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Release|x64.Build.0 = Release|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Release|x86.ActiveCfg = Release|Any CPU
+		{B664F6E0-B76B-4C43-8A1C-B582C4CC701C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
