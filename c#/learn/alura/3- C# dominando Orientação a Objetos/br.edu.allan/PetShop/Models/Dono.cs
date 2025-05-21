@@ -3,8 +3,6 @@ namespace PetShop.Models;
 
 internal class Dono
 {
-
-
     public string Nome { get; set; }
     private List<Pet> _pets;
 
