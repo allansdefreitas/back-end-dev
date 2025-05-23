@@ -51,6 +51,53 @@ namespace MyApp
             }
             */
 
+            // Números em  notação científica
+
+            float f1 = 4e-1F; //4 => (move vírgula para esquerda 1 vez) => 0.4
+            Console.WriteLine(f1);
+            double d1 = 10E4D; // 10 => (move vírgula para direita 4 vezes) => 100000
+            Console.WriteLine(d1);
+
+            bool isTilapiaADeliciaBom = true;
+            bool isRefrigeranteSaudavel = false;
+
+            Console.WriteLine(isTilapiaADeliciaBom);
+
+            char grade = 'A';
+            Console.WriteLine(grade);
+
+            // Conversão implícita: De tamanho menor para maior
+            // char -> int -> long -> float -> double
+            int castCharToInt = grade;
+            Console.WriteLine(castCharToInt);
+
+            // Conversão explícita: De tamanho maior para menor
+            // double -> float -> long -> int -> char
+            double meuDouble = 9.75;
+            int meuInt = (int) meuDouble;
+
+            Console.WriteLine(meuDouble);
+            Console.WriteLine(meuInt);
+
+            int myInt2 = 10;
+            double myDouble2 = 5.25;
+            bool myBool2 = true;
+
+            // Conversão explícita com métodos embutidos
+            Console.WriteLine("\n\nConversão explícita com métodos embutidos\n");
+            Console.WriteLine(Convert.ToString(myInt2));
+            Console.WriteLine(Convert.ToDouble(myInt2));
+            Console.WriteLine(Convert.ToInt32(myDouble2));
+            Console.WriteLine(Convert.ToString(myBool2));
+
+
+            // User inputs
+            Console.WriteLine("Enter your age:");
+            int age = Convert.ToInt32( Console.ReadLine() );
+            Console.WriteLine("Your age is: " + age);
+
+
+
 
         }
     }
