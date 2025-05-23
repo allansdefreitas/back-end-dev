@@ -1,2 +1,2 @@
 # Backend Languages and techs
- Node, Algorithms and Data Structures etc.
+ C#, Node.js, Algorithms and Data Structures etc.
