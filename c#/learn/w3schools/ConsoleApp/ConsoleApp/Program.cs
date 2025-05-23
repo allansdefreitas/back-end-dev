@@ -97,8 +97,6 @@ namespace MyApp
             Console.WriteLine("Your age is: " + age);
 
 
-
-
         }
     }
 }
