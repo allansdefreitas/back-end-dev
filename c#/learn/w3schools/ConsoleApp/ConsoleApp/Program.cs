@@ -138,6 +138,131 @@ namespace MyApp
             txt = "John\tDoe";
             Console.WriteLine(txt);
 
+            Console.Clear();
+
+            // Operador ternário
+            int time = 20;
+            if (time < 18)
+            {
+                Console.WriteLine("Good day.");
+            }
+            else
+            {
+                Console.WriteLine("Good evening.");
+            }
+
+            string result = (time < 22) ? "Dia bom e fresquinho" : "Dia bom";
+            Console.WriteLine(result);
+
+
+            Console.Clear();
+            int day = 4;
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+            }
+
+            Console.Clear();
+
+
+            // While ===================================================
+            int i = 0;
+            while (i < 5)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            
+            // Do/While 
+
+            i = 1;
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+            while (i <= 5);
+
+
+            Console.Clear();
+
+            // For loop =========================================
+            for (i = 0; i <= 10; i = i + 2)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.Clear();
+
+            // Foreach loop =====================================
+
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda", "Yaris", "Spin Activ 7" };
+            foreach (string car in cars)
+            {
+                Console.WriteLine(car);
+            }
+
+            Console.Clear();
+            // Break/Continue ===================================
+
+            for (i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                {
+                    Console.WriteLine("4 found...continue");
+                    continue;
+                }
+                Console.WriteLine(i);
+            }
+
+            Console.Write("\n\n");
+
+            for (i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                {
+                    Console.WriteLine("4 found...break");
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+
+            Console.Clear();
+
+            for (i = 0; i < 10; i++)
+            {
+
+                for(int j = 0; j < 10; j++)
+                {
+                    if (i == 4)
+                    {
+                        Console.WriteLine("i==4 found...break");
+                        break;
+                    }
+                    Console.WriteLine($"{i} {j}");
+                }
+                
+            }
 
 
 
