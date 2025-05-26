@@ -92,9 +92,53 @@ namespace MyApp
 
 
             // User inputs
-            Console.WriteLine("Enter your age:");
-            int age = Convert.ToInt32( Console.ReadLine() );
-            Console.WriteLine("Your age is: " + age);
+            //Console.WriteLine("Enter your age:");
+            //int age = Convert.ToInt32( Console.ReadLine() );
+            //Console.WriteLine("Your age is: " + age);
+
+
+            Console.WriteLine("10 % 3 = {0}", 10 % 3);
+
+            Console.WriteLine(5 > 3);
+
+            string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Console.WriteLine("The length of the txt string is: {0}", txt.Length);
+            Console.WriteLine(txt.ToLower());
+
+
+            string title = "MsC ";
+            string firstName = "John ";
+            string lastName = "Doe";
+            string name = string.Concat(title, firstName, lastName);
+            Console.WriteLine(name);
+
+            // Interpolação
+            firstName = "Allan";
+            lastName = "Freitas";
+            string fullName = $"My full name is: {firstName} {lastName} {"MsC"}";
+            Console.WriteLine(fullName);
+
+            //Caracteres especiais
+            txt = "The character \"\\\" is called \'backslash\'.";
+            Console.WriteLine(txt);
+            
+            // Caracteres de escape
+            txt = "Jonh\b"; // volta o cursor para a esquerda, mas como não tem nada depois pra..
+            Console.WriteLine(txt); // ...sobrescrever, não surte efeito de apagar
+
+            txt = "Jonh\b "; // o espaço sobrescreve o h
+            Console.WriteLine(txt);
+
+            txt = "Jo\bnh";
+            Console.WriteLine(txt); // o 'o' é sobrescrito pelo n
+
+            txt = "Jonh\nMariah";
+            Console.WriteLine(txt);
+
+            txt = "John\tDoe";
+            Console.WriteLine(txt);
+
+
 
 
         }
