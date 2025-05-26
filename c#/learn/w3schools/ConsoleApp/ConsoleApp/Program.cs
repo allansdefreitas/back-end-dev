@@ -264,6 +264,49 @@ namespace MyApp
                 
             }
 
+            Console.Clear();
+
+            // Arrays ===================================================
+            string[] names = { "Allan", "Samuel", "Pedro", "Rebeca" };
+
+            Console.WriteLine(names[2]);
+
+            names[0] = "Laudicea";
+
+            Console.WriteLine(names[0]);
+
+            int[] ints = { 1, 2, 3, 4, 5, 6 };
+
+
+            for (i = 0; i< ints.Length; i++)
+            {
+                Console.WriteLine(i);   
+            }
+
+            // Outra forma de criar arrays
+            string[] livros = new string[4];
+
+            livros[0] = "Calendário da Profecia";
+            livros[1] = "Daniel e Apocalipse";
+            livros[2] = "Pureza Sexual";
+            livros[3] = "Começando Juntos";
+
+            string[] paises = new string[3] { "EUA", "Portugal", "Israel" };
+
+            string[] cidades = new string[] { "Tenessee", "Monte Mor", "Haifa" };
+
+            string[] conferencias = { "CVPR", "IJCNN", "IEEE/CVF", "BRACIS" };
+
+
+            Console.Clear();
+
+            //foreach (type variableName in arrayName) 
+            foreach (string cidade in cidades) {
+                Console.WriteLine($"I will visit the {cidade} city!");
+            }
+
+
+
 
 
         }
