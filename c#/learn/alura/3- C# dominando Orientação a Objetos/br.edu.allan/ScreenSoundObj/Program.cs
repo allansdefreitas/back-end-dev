@@ -25,7 +25,6 @@ internal class Program
         Dictionary<string, Banda> bandasRegistradas = new Dictionary<string, Banda>();
         RegistrarBandasIniciais(bandasRegistradas);
               
-
         void ExibirMenu()
         {
             Menu.ExibirLogo();
@@ -53,7 +52,6 @@ internal class Program
                     MenuAvaliacaoBanda menuAvaliacaoBanda = new();
                     menuAvaliacaoBanda.Executar(bandasRegistradas);
                     ExibirMenu();
-                    
                     break;
                 case 5:
                     MenuExibicaoDetalhes menuExibicaoDetalhes = new MenuExibicaoDetalhes();
