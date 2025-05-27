@@ -1,4 +1,4 @@
-﻿using Edu.Allan.ScreenSoundObj.Modelos;
+﻿
 using ScreenSoundObj.Modelos;
 
 
@@ -37,7 +37,6 @@ internal class MenuAvaliacaoBanda : Menu
             Console.WriteLine("Digite uma tecla para voltar ao menu principal");
             Console.ReadKey();
             Console.Clear();
-            
         }
 
     }

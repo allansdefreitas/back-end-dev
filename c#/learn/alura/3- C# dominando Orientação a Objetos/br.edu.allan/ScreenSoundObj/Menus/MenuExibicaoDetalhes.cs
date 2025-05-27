@@ -1,4 +1,5 @@
-﻿using Edu.Allan.ScreenSoundObj.Modelos;
+﻿
+using ScreenSoundObj.Modelos;
 
 namespace ScreenSoundObj.Menus;
 

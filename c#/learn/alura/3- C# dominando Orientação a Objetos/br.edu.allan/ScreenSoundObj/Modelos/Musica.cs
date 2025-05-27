@@ -1,4 +1,4 @@
-﻿namespace Edu.Allan.ScreenSoundObj.Modelos;
+﻿namespace ScreenSoundObj.Modelos;
 
 internal class Musica
 {

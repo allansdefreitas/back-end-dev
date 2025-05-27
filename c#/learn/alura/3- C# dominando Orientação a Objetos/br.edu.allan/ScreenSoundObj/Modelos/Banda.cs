@@ -1,6 +1,6 @@
 ﻿using ScreenSoundObj.Modelos;
 
-namespace Edu.Allan.ScreenSoundObj.Modelos;
+namespace ScreenSoundObj.Modelos;
 
 internal class Banda
 {
