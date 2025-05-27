@@ -6,9 +6,10 @@ namespace ScreenSoundObj.Menus;
 internal class MenuExibicaoDetalhes : Menu
 {
 
-    public void Executar(Dictionary<string, Banda> bandasRegistradas)
+    public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
-        Console.Clear();
+        base.Executar(bandasRegistradas);
+
         ExibirTituloDaOpcao("Exibir detalhes da banda");
 
         Console.Write("Digite o nome da banda que deseja conhecer melhor: ");

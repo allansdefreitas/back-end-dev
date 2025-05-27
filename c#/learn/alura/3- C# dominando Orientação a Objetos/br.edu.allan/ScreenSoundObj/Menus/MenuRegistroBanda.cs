@@ -3,9 +3,10 @@ using ScreenSoundObj.Modelos;
 
 internal class MenuRegistroBanda : Menu
 {
-    internal void Executar(Dictionary<string, Banda> bandasRegistradas)
+    public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
-        Console.Clear();
+        base.Executar(bandasRegistradas);
+
         MenuExibicaoDetalhes menu = new MenuExibicaoDetalhes();
         menu.ExibirTituloDaOpcao("Registro das bandas");
 

@@ -1,11 +1,16 @@
 ﻿
 
 
+using ScreenSoundObj.Modelos;
+
 namespace ScreenSoundObj.Menus;
 
 internal class Menu
 {
-
+    public virtual void Executar(Dictionary<string, Banda> bandasRegistradas)
+    {
+        Console.Clear();
+    }
 
     public void ExibirTituloDaOpcao(string titulo)
     {

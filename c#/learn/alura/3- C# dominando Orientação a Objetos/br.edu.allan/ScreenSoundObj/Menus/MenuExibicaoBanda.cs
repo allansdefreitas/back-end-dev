@@ -1,11 +1,11 @@
 ﻿using ScreenSoundObj.Menus;
 using ScreenSoundObj.Modelos;
 
-internal class MenuExibicaoBanda
+internal class MenuExibicaoBanda : Menu
 {
-    internal void Executar(Dictionary<string, Banda> bandasRegistradas)
+    public override void Executar(Dictionary<string, Banda> bandasRegistradas)
     {
-        Console.Clear();
+        base.Executar(bandasRegistradas);
 
         MenuExibicaoDetalhes menu = new MenuExibicaoDetalhes();
         menu.ExibirTituloDaOpcao("Exibindo todas as bandas registradas na nossa aplicação");
