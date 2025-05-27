@@ -305,6 +305,69 @@ namespace MyApp
                 Console.WriteLine($"I will visit the {cidade} city!");
             }
 
+            Console.Clear();
+            
+            // Sort arrays ---------
+            Array.Sort(paises); // Aqui, a chamada é por referência
+            foreach (var pais in paises)
+            {
+                Console.WriteLine(pais);
+            }
+
+
+            int[] myNumbers = { 5, 1, 8, 9 };
+            Array.Sort(myNumbers);
+            foreach (int number in myNumbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            // Using System.Linq namespace ====================
+            Console.WriteLine(myNumbers.Max());
+
+            Console.Clear();
+
+
+            // Arrays de duas dimensões ===========================================
+            int[,] array2D = { { 1, 4, 2 }, { 3, 6, 8 } };
+
+            Console.WriteLine(array2D[0, 2]);
+            array2D[0, 2] = 1;
+
+            Console.WriteLine(array2D[0, 2]);
+
+            Console.Clear();
+
+            int[,] matriz = { { 1, 4, 2 }, { 3, 6, 8 } };
+            
+            int contador = 0;
+            foreach (int e in matriz)
+            {
+                Console.WriteLine(e);
+                contador++;
+            }
+
+            Console.WriteLine("contador: {0}", contador);
+
+
+            Console.WriteLine(matriz.Length);
+
+            Console.WriteLine("matriz.GetLength(0) = {0}", matriz.GetLength(0)); // 2 linhas
+            Console.WriteLine("matriz.GetLength(1) = {0}", matriz.GetLength(1)); // 3 colunas
+
+            //Console.Clear();
+
+            for (i = 0; i < matriz.GetLength(0); i++)
+            {
+                for(int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.WriteLine($"matriz[{i}, {j}]= {matriz[i, j]}");
+                }
+            }
+
+
+
+
 
 
 
