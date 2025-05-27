@@ -62,11 +62,16 @@ internal class Program
                     MostrarBandasRegistradas();
                     break;
                 case 4:
-                    AvaliarUmaBanda();
+
+                    MenuAvaliacaoBanda menu4 = new();
+                    menu4.Executar(bandasRegistradas);
+                    ExibirOpcoesDoMenu();
+                    
                     break;
                 case 5:
-                    MenuExibirDetalhes menu = new MenuExibirDetalhes();
+                    MenuExibicaoDetalhes menu = new MenuExibicaoDetalhes();
                     menu.Executar(bandasRegistradas);
+                    ExibirOpcoesDoMenu();
                     break;
                 case -1:
                     Console.WriteLine("Tchau tchau :)");
@@ -80,7 +85,7 @@ internal class Program
         void RegistrarAlbum()
         {
             Console.Clear();
-            MenuExibirDetalhes menu = new MenuExibirDetalhes();
+            MenuExibicaoDetalhes menu = new MenuExibicaoDetalhes();
             menu.ExibirTituloDaOpcao("Registro de álbuns");
 
             Console.Write("Digite a banda cujo álbum deseja registrar: ");
@@ -114,7 +119,7 @@ internal class Program
         void RegistrarBanda()
         {
             Console.Clear();
-            MenuExibirDetalhes menu = new MenuExibirDetalhes();
+            MenuExibicaoDetalhes menu = new MenuExibicaoDetalhes();
             menu.ExibirTituloDaOpcao("Registro das bandas");
 
             Console.Write("Digite o nome da banda que deseja registrar: ");
@@ -133,7 +138,7 @@ internal class Program
         {
             Console.Clear(); 
             
-            MenuExibirDetalhes menu = new MenuExibirDetalhes();
+            MenuExibicaoDetalhes menu = new MenuExibicaoDetalhes();
             menu.ExibirTituloDaOpcao("Exibindo todas as bandas registradas na nossa aplicação");
 
             foreach (string banda in bandasRegistradas.Keys)
@@ -147,42 +152,6 @@ internal class Program
             ExibirOpcoesDoMenu();
 
         }
-
-        void AvaliarUmaBanda()
-        {
-            Console.Clear();
-            MenuExibirDetalhes menu = new MenuExibirDetalhes();
-            menu.ExibirTituloDaOpcao("Avaliar banda");
-
-            Console.Write("Digite o nome da banda que deseja avaliar: ");
-            string nomeDaBanda = Console.ReadLine()!;
-
-            if (bandasRegistradas.ContainsKey(nomeDaBanda))
-            {
-                Banda bandaAvaliada = bandasRegistradas[nomeDaBanda];
-
-                Console.Write($"Qual a nota que a banda {bandaAvaliada.Nome} merece: ");
-                string notaString = Console.ReadLine()!;
-
-                Avaliacao avaliacao = Avaliacao.Parse(notaString);
-                bandaAvaliada.AdicionarNota(avaliacao);
-
-                Console.WriteLine($"\nA nota {avaliacao.Nota} foi registrada com sucesso para a banda {bandaAvaliada.Nome}");
-                Thread.Sleep(2000);
-                Console.Clear();
-                ExibirOpcoesDoMenu();
-            }
-            else
-            {
-                Console.WriteLine($"\nA banda {nomeDaBanda} não foi encontrada!");
-                Console.WriteLine("Digite uma tecla para voltar ao menu principal");
-                Console.ReadKey();
-                Console.Clear();
-                ExibirOpcoesDoMenu();
-            }
-
-        }
-
   
         ExibirOpcoesDoMenu();
 
