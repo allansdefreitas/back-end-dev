@@ -3,7 +3,6 @@ using ScreenSoundObj.Modelos;
 
 internal class Program
 {
-
     private static void RegistrarBandasIniciais(Dictionary<string, Banda> bandasRegistradas)
     {
         Banda bandaJacira = new("Jacira");
@@ -23,7 +22,6 @@ internal class Program
     }
     private static void Main(string[] args)
     {
-
         Dictionary<string, Banda> bandasRegistradas = new Dictionary<string, Banda>();
         Dictionary<int, Menu> opcoes = new();
 
@@ -35,60 +33,19 @@ internal class Program
         opcoes.Add(-1, new MenuSaida());
 
         RegistrarBandasIniciais(bandasRegistradas);
+  
+        Menu.ExibirLogo();
+        Menu.ExibirOpcoesDoMenu();
+        int opcao = Menu.ObterOpcaoUsuario();
 
-                      
-        void ExibirMenu()
+        if (opcoes.ContainsKey(opcao))
         {
-            Menu.ExibirLogo();
-            Menu.ExibirOpcoesDoMenu();
-            int opcao = Menu.ObterOpcaoUsuario();
-
-            if (opcoes.ContainsKey(opcao))
-            {
-                Menu menuASerEscolhido = opcoes[opcao];
-                menuASerEscolhido.Executar(bandasRegistradas);
-                ExibirMenu();
-            }else
-            {
-                Console.WriteLine("Opção inválida");
-            }
-
-                switch (opcao)
-                {
-                    case 1:
-                        MenuRegistroBanda menuRegistroBanda = new();
-                        menuRegistroBanda.Executar(bandasRegistradas);
-                        ExibirMenu();
-                        break;
-                    case 2:
-                        MenuRegistroAlbum menuRegistroAlbum = new();
-                        menuRegistroAlbum.Executar(bandasRegistradas);
-                        ExibirMenu();
-                        break;
-                    case 3:
-                        MenuExibicaoBanda menuExibicaoBanda = new();
-                        menuExibicaoBanda.Executar(bandasRegistradas);
-                        ExibirMenu();
-                        break;
-                    case 4:
-                        MenuAvaliacaoBanda menuAvaliacaoBanda = new();
-                        menuAvaliacaoBanda.Executar(bandasRegistradas);
-                        ExibirMenu();
-                        break;
-                    case 5:
-                        MenuExibicaoDetalhes menuExibicaoDetalhes = new MenuExibicaoDetalhes();
-                        menuExibicaoDetalhes.Executar(bandasRegistradas);
-                        ExibirMenu();
-                        break;
-                    case -1:
-                        MenuSaida menuSaida = new MenuSaida();
-                        menuSaida.Executar(bandasRegistradas);
-                        break;
-                    default:
-                        Console.WriteLine("Opção inválida");
-                        break;
-                }
+            Menu menuASerEscolhido = opcoes[opcao];
+            menuASerEscolhido.Executar(bandasRegistradas);
+            if (opcao > 0) Menu.ExibirOpcoesDoMenu();
+        }else
+        {
+            Console.WriteLine("Opção inválida");
         }
-        ExibirMenu();
     }
 }
