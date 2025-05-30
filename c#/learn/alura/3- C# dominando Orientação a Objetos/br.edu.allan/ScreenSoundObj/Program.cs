@@ -28,26 +28,33 @@ internal class Program
         opcoes.Add(1, new MenuRegistroBanda());
         opcoes.Add(2, new MenuRegistroAlbum());
         opcoes.Add(3, new MenuExibicaoBanda());
-        opcoes.Add(4, new MenuExibicaoBanda());
+        opcoes.Add(4, new MenuAvaliacaoBanda());
         opcoes.Add(5, new MenuExibicaoDetalhes());
         opcoes.Add(-1, new MenuSaida());
 
         RegistrarBandasIniciais(bandasRegistradas);
-  
-        Menu.ExibirLogo();
-        Menu.ExibirOpcoesDoMenu();
-        int opcao = Menu.ObterOpcaoUsuario();
 
 
-
-        if (opcoes.ContainsKey(opcao))
+        while (true)
         {
-            Menu menuASerEscolhido = opcoes[opcao];
-            menuASerEscolhido.Executar(bandasRegistradas);
-            if (opcao > 0) Menu.ExibirOpcoesDoMenu();
-        }else
-        {
-            Console.WriteLine("Opção inválida");
+            Menu.ExibirLogo();
+            Menu.ExibirOpcoesDoMenu();
+            int opcaoEscolhida = Menu.ObterOpcaoUsuario();
+
+            if (opcoes.ContainsKey(opcaoEscolhida))
+            {
+                Menu menuASerEscolhido = opcoes[opcaoEscolhida];
+                menuASerEscolhido.Executar(bandasRegistradas);
+                
+                if(menuASerEscolhido is MenuSaida)
+                {
+                    break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Opção inválida");
+            }
         }
     }
 }
