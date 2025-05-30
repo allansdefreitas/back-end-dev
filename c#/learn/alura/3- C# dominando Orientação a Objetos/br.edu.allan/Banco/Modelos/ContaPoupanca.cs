@@ -1,39 +1,12 @@
 ﻿namespace Banco.Modelos;
 
-public class ContaPoupanca : Conta
+internal class ContaPoupanca : Conta
 {
+    private double TaxaRendimento { get; set; }
 
-    public override void Sacar(double valor)
+    public override double CalcularSaldo()
     {
-        if (valor >= 0)
-        {
-            if (valor <= Saldo)
-            {
-                this.Saldo = valor - Saldo;
-                Console.WriteLine("Saque realizado com sucesso!");
-            }
-            else
-            {
-                Console.WriteLine("Saldo insuficiente!");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Valor inválido!");
-        }
-    }
-
-    public override void Depositar(double valor)
-    {
-        if (valor >= 0)
-        {
-            this.Saldo += valor;
-            Console.WriteLine("Depósito realizado com sucesso!");
-        }
-        else
-        {
-            Console.WriteLine("Valor inválido!");
-        }
+        return base.CalcularSaldo() * (1 + TaxaRendimento);
     }
 
 }
