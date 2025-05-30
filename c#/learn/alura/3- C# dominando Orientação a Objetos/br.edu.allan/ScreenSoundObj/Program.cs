@@ -38,6 +38,8 @@ internal class Program
         Menu.ExibirOpcoesDoMenu();
         int opcao = Menu.ObterOpcaoUsuario();
 
+
+
         if (opcoes.ContainsKey(opcao))
         {
             Menu menuASerEscolhido = opcoes[opcao];
