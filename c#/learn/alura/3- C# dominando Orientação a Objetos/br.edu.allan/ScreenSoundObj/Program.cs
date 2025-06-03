@@ -16,6 +16,9 @@ internal class Program
         bandaVictorinoSilva.AdicionarNota(new Avaliacao(10));
         bandaVictorinoSilva.AdicionarNota(new Avaliacao(9));
 
+        Album albumHaUmPorque = new Album("Há um Por quê");
+        bandaVictorinoSilva.AdicionarAlbum(albumHaUmPorque);
+
         bandasRegistradas.Add(bandaJacira.Nome, bandaJacira);
         bandasRegistradas.Add(bandaVictorinoSilva.Nome, bandaVictorinoSilva);
 
@@ -29,7 +32,8 @@ internal class Program
         opcoes.Add(2, new MenuRegistroAlbum());
         opcoes.Add(3, new MenuExibicaoBanda());
         opcoes.Add(4, new MenuAvaliacaoBanda());
-        opcoes.Add(5, new MenuExibicaoDetalhes());
+        opcoes.Add(5, new MenuAvaliacaoAlbum());
+        opcoes.Add(6, new MenuExibicaoDetalhes());
         opcoes.Add(-1, new MenuSaida());
 
         RegistrarBandasIniciais(bandasRegistradas);

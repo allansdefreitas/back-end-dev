@@ -17,7 +17,13 @@ internal class MenuExibicaoDetalhes : Menu
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
         {
             Banda banda = bandasRegistradas[nomeDaBanda];
-            Console.WriteLine($"\nA média da banda {nomeDaBanda} é {banda.Media.ToString("F2")}.");
+            Console.WriteLine($"\nA média da banda \"{nomeDaBanda}\" é {banda.Media.ToString("F2")}.");
+
+            
+            foreach(Album album in banda.Albuns)
+            {
+                Console.WriteLine($"\nA média do álbum \"{album.Nome}\" é {album.Media.ToString("F2")}.");
+            }
        
             Console.WriteLine("Digite uma tecla para voltar ao menu principal");
             Console.ReadKey();
@@ -26,7 +32,7 @@ internal class MenuExibicaoDetalhes : Menu
         }
         else
         {
-            Console.WriteLine($"\nA banda {nomeDaBanda} não foi encontrada!");
+            Console.WriteLine($"\nA banda \"{nomeDaBanda}\" não foi encontrada!");
             Console.WriteLine("Digite uma tecla para voltar ao menu principal");
             Console.ReadKey();
             Console.Clear();
