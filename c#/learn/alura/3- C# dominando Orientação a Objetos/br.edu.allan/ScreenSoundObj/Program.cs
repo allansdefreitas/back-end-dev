@@ -18,6 +18,9 @@ internal class Program
 
         Album albumHaUmPorque = new Album("Há um Por quê");
         bandaVictorinoSilva.AdicionarAlbum(albumHaUmPorque);
+        
+        Album albumClassicosInesqueciveis = new Album("Clássicos Inesquecíveis");
+        bandaVictorinoSilva.AdicionarAlbum(albumClassicosInesqueciveis);
 
         bandasRegistradas.Add(bandaJacira.Nome, bandaJacira);
         bandasRegistradas.Add(bandaVictorinoSilva.Nome, bandaVictorinoSilva);

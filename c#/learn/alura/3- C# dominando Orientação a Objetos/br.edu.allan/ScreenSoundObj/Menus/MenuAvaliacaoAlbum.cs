@@ -45,7 +45,6 @@ internal class MenuAvaliacaoAlbum : Menu
             Thread.Sleep(2000);
             Console.Clear();
 
-
         }
         else
         {
