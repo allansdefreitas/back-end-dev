@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo Abstract", "Zoo Abstrac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eletronicos", "Eletronicos\Eletronicos.csproj", "{3B1E4BD5-5934-4FB1-9EF1-63C26A4FC891}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleAcessoPredio", "ControleAcessoPredio\ControleAcessoPredio.csproj", "{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -181,6 +183,18 @@ Global
 		{3B1E4BD5-5934-4FB1-9EF1-63C26A4FC891}.Release|x64.Build.0 = Release|Any CPU
 		{3B1E4BD5-5934-4FB1-9EF1-63C26A4FC891}.Release|x86.ActiveCfg = Release|Any CPU
 		{3B1E4BD5-5934-4FB1-9EF1-63C26A4FC891}.Release|x86.Build.0 = Release|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Release|x64.Build.0 = Release|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC8BCAD4-ABEA-4AB1-B5EA-F3BA4EE91FFC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
