@@ -6,7 +6,6 @@ internal class Program
     private static void Main(string[] args)
     {
 
-
         Entrega entregaDePizza = new Entrega(representante: "Marcela");
         Colaborador joseDaAlura = new Colaborador(idAcesso: 25);
         Colaborador mariaDaAcme = new Colaborador(idAcesso: 14);
