@@ -23,7 +23,14 @@ internal class Program
         Console.WriteLine();
         donoAllan.ExibirPets();
 
+        Produto shampooCanino = new Produto()
+        {
+            Nome = "Shampoo Clean Dog",
+            PrecoUnitario = 25.90m,
+            Quantidade = 10
+        };
 
+        Console.WriteLine(shampooCanino.CalcularPagamento()); 
 
     }
 }

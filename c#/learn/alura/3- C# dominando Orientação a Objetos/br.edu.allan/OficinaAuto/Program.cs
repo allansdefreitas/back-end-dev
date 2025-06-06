@@ -10,6 +10,9 @@ internal class Program
         Veiculo veiculoCorolla = new Veiculo("Toyota", "Corolla", 2025, proprietarioAllan);
         Veiculo veiculoYaris = new Veiculo("Toyota", "Yaris Sedan", 2025, proprietarioAllan);
 
+
+        veiculoYaris.Voar();
+
         proprietarioAllan.ExibirVeiculos();
        
 

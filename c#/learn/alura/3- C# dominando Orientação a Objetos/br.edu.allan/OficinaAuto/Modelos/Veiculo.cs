@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OficinaAuto.Modelos
 {
-    public class Veiculo
+    public class Veiculo : IPilotavel, IVoavel
     {
 
         public string Marca { get; }
@@ -29,6 +29,16 @@ namespace OficinaAuto.Modelos
 
             proprietario.AdquirirVeiculo(this);
         
+        }
+
+        public void Pilotar()
+        {
+            Console.WriteLine($"Veículo {this.Marca} está pilotando");
+        }
+
+        public void Voar()
+        {
+            Console.WriteLine($"Veículo {this.Modelo} está voando");
         }
     }
 }
