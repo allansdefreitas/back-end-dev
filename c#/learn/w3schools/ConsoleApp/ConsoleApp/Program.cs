@@ -217,9 +217,9 @@ namespace MyApp
             // Foreach loop =====================================
 
             string[] cars = { "Volvo", "BMW", "Ford", "Mazda", "Yaris", "Spin Activ 7" };
-            foreach (string car in cars)
+            foreach (string carro in cars)
             {
-                Console.WriteLine(car);
+                Console.WriteLine(carro);
             }
 
             Console.Clear();
@@ -384,6 +384,18 @@ namespace MyApp
 
             Car car = new Car();
             car.honk();
+
+            // Enums =========================
+            Console.Clear();
+            Level nivel = Level.Medium;
+            
+            Console.WriteLine(nivel);
+            Console.WriteLine(Level.High);
+            Console.WriteLine((int) (Level.High));
+
+
+            int myNum = (int)Months.April;
+            Console.WriteLine(myNum);
         }
 
         static void MyMethod(string country = "Norway")
@@ -452,6 +464,24 @@ namespace MyApp
             // The body of animalSound() is provided here
             Console.WriteLine("The pig says: wee wee");
         }
+    }
+
+    enum Level
+    {
+        Low, // O valor é o próprio nome da propriedade
+        Medium,
+        High
+    }
+
+    enum Months
+    {
+        January,    // 0
+        February,   // 1
+        March,      // 2
+        April,      // 3
+        May,        // 4
+        June,       // 5
+        July        // 6
     }
 
 
