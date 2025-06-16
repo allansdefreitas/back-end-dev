@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace MyApp
 {
@@ -396,7 +397,25 @@ namespace MyApp
 
             int myNum = (int)Months.April;
             Console.WriteLine(myNum);
+
+
+            // Files ==========================================
+            Console.Clear();
+            string path = "filename.txt";
+
+            string text = "Hello World!";  // Create a text string
+            File.WriteAllText(path, text);  // Create a file and write the content of writeText to it
+
+            string readText = File.ReadAllText(path);  // Read the contents of the file
+            Console.WriteLine(readText);  // Output the content
+
+            File.AppendAllText(path, "\nAllan Freitas");
+
+            readText = File.ReadAllText(path);  // Read the contents of the file
+            Console.WriteLine(readText);  // Output the content
+
         }
+
 
         static void MyMethod(string country = "Norway")
         {
