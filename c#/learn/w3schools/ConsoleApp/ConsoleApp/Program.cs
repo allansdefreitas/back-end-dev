@@ -366,12 +366,93 @@ namespace MyApp
             }
 
 
+            // Métodos/funções: Argumento padrão /Parâmetro opcional ========================
 
+            Console.Clear();
+            MyMethod();
 
+            // Named Arguments =============================================================
+            Console.Clear();
+            NamedArguments(child3: "John", child1: "Liam", child2: "Liam");
 
+            // Sobrecarga de métodos =============================================================
+            Console.Clear();
+            int myNum1 = PlusMethod(8, 5);
+            double myNum2 = PlusMethod(4.3, 6.26);
+            Console.WriteLine("Int: " + myNum1);
+            Console.WriteLine("Double: " + myNum2);
 
+            Car car = new Car();
+            car.honk();
+        }
 
+        static void MyMethod(string country = "Norway")
+        {
+            Console.WriteLine(country);
+        }
 
+        static void NamedArguments(string child1, string child2, string child3)
+        {
+            Console.WriteLine("The youngest child is: " + child3);
+        }
+        static int PlusMethod(int x, int y)
+        {
+            return x + y;
+        }
+
+        static double PlusMethod(double x, double y)
+        {
+            return x + y;
         }
     }
+
+    class Vehicle  // base class (parent) 
+    {
+        public string brand = "Ford";  // Vehicle field
+        public void honk()             // Vehicle method 
+        {
+            Console.WriteLine("Tuut, tuut!");
+        }
+    }
+
+    class Car : Vehicle  // derived class (child)
+    {
+        public string modelName = "Mustang";  // Car field
+
+        public Car()
+        {
+        }
+    }
+
+    sealed class Animal
+    {
+        public string sciName;
+        public void move()
+        {
+            Console.WriteLine("The animal is moving");
+        }
+    }
+
+    //class Dog : Animal // 'class1' : cannot derive from sealed type 'class2'
+    //{
+    //    public string name;
+    //}
+
+    // Interface ================================================================
+    interface IAnimal
+    {
+        void animalSound(); // interface method (does not have a body)
+    }
+
+    // Pig "implements" the IAnimal interface
+    class Pig : IAnimal
+    {
+        public void animalSound()
+        {
+            // The body of animalSound() is provided here
+            Console.WriteLine("The pig says: wee wee");
+        }
+    }
+
+
 }

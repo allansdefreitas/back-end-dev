@@ -5,6 +5,7 @@ namespace ScreenSoundObj.Modelos;
 internal class Banda : IAvaliavel
 {
     private List<Album> albuns;
+    //public IEnumerable<Album> Albuns => albuns;
     private List<Avaliacao> notas;
 
     public Banda(string nome)
