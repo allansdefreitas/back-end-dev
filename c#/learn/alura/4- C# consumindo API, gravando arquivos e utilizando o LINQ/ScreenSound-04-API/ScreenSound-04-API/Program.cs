@@ -11,14 +11,23 @@ internal class Program
     {
         using (HttpClient client = new HttpClient())
         {  
-
             try
             {
                 string resposta = await client.GetStringAsync(URL_API_GET);
                 //Console.WriteLine(resposta);
 
-                var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta);
-                Console.WriteLine($"Quantidade de músicas: {musicas.Count}");
+                var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
+
+                musicas[0].ExibirDetalhes();
+
+                foreach(Musica musica in musicas)
+                {
+                    if (musica.Genero.Contains("Electronic"))
+                    {
+                        musica.ExibirDetalhes();
+                        Console.WriteLine("\n\n");
+                    }
+                }
 
 
             }catch(Exception ex)
