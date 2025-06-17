@@ -9,7 +9,6 @@ internal class Program
         using (HttpClient client = new HttpClient())
         {
 
-
             try
             {
                 string resposta = await client.GetStringAsync(URL_API_GET);
