@@ -8,9 +8,17 @@ internal class Program
     {
         using (HttpClient client = new HttpClient())
         {
+
+
+            try
+            {
+                string resposta = await client.GetStringAsync(URL_API_GET);
+                Console.WriteLine(resposta);
+            }catch(Exception ex)
+            {
+                Console.WriteLine($"An error occured: {ex.Message}");
+            }
             
-            string resposta = await client.GetStringAsync(URL_API_GET);
-            Console.WriteLine(resposta);
         }
     }
 }
