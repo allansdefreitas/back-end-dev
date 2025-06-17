@@ -1,4 +1,7 @@
 ﻿
+using ScreenSound_04_API.Modelos;
+using System.Text.Json;
+
 internal class Program
 {
 
@@ -12,7 +15,12 @@ internal class Program
             try
             {
                 string resposta = await client.GetStringAsync(URL_API_GET);
-                Console.WriteLine(resposta);
+                //Console.WriteLine(resposta);
+
+                var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta);
+                Console.WriteLine($"Quantidade de músicas: {musicas.Count}");
+
+
             }catch(Exception ex)
             {
                 Console.WriteLine($"An error occured: {ex.Message}");
