@@ -1,5 +1,6 @@
 ﻿
 using ScreenSound_04_API.Modelos;
+using ScreenSound_04_API.Filtros;
 using System.Text.Json;
 
 internal class Program
@@ -20,14 +21,7 @@ internal class Program
 
                 musicas[0].ExibirDetalhes();
 
-                foreach(Musica musica in musicas)
-                {
-                    if (musica.Genero.Contains("Electronic"))
-                    {
-                        musica.ExibirDetalhes();
-                        Console.WriteLine("\n\n");
-                    }
-                }
+                LinqFilter.FiltrarTodosGenerosMusicais(musicas);
 
 
             }catch(Exception ex)
