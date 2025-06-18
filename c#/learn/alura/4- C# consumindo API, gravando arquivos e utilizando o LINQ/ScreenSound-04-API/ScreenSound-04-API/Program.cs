@@ -23,7 +23,9 @@ internal class Program
 
                 //LinqFilter.FiltrarTodosGenerosMusicais(musicas);
 
-                LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+                //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+
+                LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
 
 
             }catch(Exception ex)
