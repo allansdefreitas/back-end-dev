@@ -21,7 +21,9 @@ internal class Program
 
                 musicas[0].ExibirDetalhes();
 
-                LinqFilter.FiltrarTodosGenerosMusicais(musicas);
+                //LinqFilter.FiltrarTodosGenerosMusicais(musicas);
+
+                LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
 
 
             }catch(Exception ex)
