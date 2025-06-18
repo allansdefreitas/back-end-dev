@@ -27,10 +27,13 @@ internal class Program
 
                 //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
 
-                LinqFilter.FiltrarMusicasPorArtista(musicas, "50 Cent");
+                //LinqFilter.FiltrarMusicasPorArtista(musicas, "50 Cent");
+
+                LinqFilter.FiltrarMusicasPorAno(musicas, 2011);
 
 
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 Console.WriteLine($"An error occured: {ex.Message}");
             }
