@@ -25,7 +25,9 @@ internal class Program
 
                 //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
 
-                LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
+                //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
+
+                LinqFilter.FiltrarMusicasPorArtista(musicas, "50 Cent");
 
 
             }catch(Exception ex)
