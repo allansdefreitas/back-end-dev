@@ -19,7 +19,7 @@ internal class Program
 
                 var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
 
-                musicas[0].ExibirDetalhes();
+                //musicas[0].ExibirDetalhes();
 
                 //LinqFilter.FiltrarTodosGenerosMusicais(musicas);
 
@@ -29,7 +29,32 @@ internal class Program
 
                 //LinqFilter.FiltrarMusicasPorArtista(musicas, "50 Cent");
 
-                LinqFilter.FiltrarMusicasPorAno(musicas, 2011);
+                //LinqFilter.FiltrarMusicasPorAno(musicas, 2011);
+
+                var playlist = new Playlist("John");
+
+                playlist.Adicionar(musicas[0]);
+                playlist.Adicionar(musicas[55]);
+                playlist.Adicionar(musicas[44]);
+                playlist.Adicionar(musicas[32]);
+                playlist.Adicionar(musicas[47]);
+
+                playlist.ExibirMusicas();
+                Console.WriteLine();
+
+                var playlistMathew = new Playlist("Mathew");
+
+                playlistMathew.Adicionar(musicas[149]);
+                playlistMathew.Adicionar(musicas[155]);
+                playlistMathew.Adicionar(musicas[144]);
+                playlistMathew.Adicionar(musicas[232]);
+                playlistMathew.Adicionar(musicas[247]);
+
+                playlistMathew.ExibirMusicas();
+
+                Console.WriteLine();
+
+                playlistMathew.GerarArquivoJSON();
 
 
             }

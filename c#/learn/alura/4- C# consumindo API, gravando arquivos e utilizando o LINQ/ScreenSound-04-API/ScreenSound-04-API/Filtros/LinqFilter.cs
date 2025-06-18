@@ -68,7 +68,6 @@ internal class LinqFilter
         {
             Console.WriteLine($"- {musica.Nome}");
         }
-
     }
 
 }
