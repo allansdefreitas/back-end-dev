@@ -12,7 +12,41 @@ internal class Program
         //Exercise1();
         //Exercise2();
         //Exercise3MelhorSolucao();
-        Exercise4();
+        //Exercise4();
+        Exercise5();
+
+    }
+
+    private static void Exercise5()
+    {
+        /* 5. Criar um programa que lê um arquivo JSON contendo informações de várias pessoas, permite ao usuário 
+         * inserir uma idade e exibe as pessoas com aquela idade. */
+
+        string filename = FILENAME + "-list.json";
+
+        string jsonString = File.ReadAllText(filename);
+
+        // Desserializar JSON para objeto Pessoa
+        List<User> users = JsonSerializer.Deserialize<List<User>>(jsonString);
+
+
+        Console.WriteLine("Enter a value for age you want to search: ");
+        string ageString = Console.ReadLine()!;
+        int age = int.Parse(ageString);
+
+        List<User> userInAge = users
+            .Where(x => x.Age == age)
+            .ToList();
+
+        int quantityUsersInAge = userInAge.Count();
+
+        Console.WriteLine($"{quantityUsersInAge} users have the age of {age} years old:\n");
+
+        foreach (User user in userInAge)
+        {
+            user.ShowInfo();
+
+        }
 
     }
 
@@ -21,7 +55,7 @@ internal class Program
         /* 4. Criar um programa que lê um arquivo JSON contendo informações de várias pessoas, ,
          * desserializa essas informações em uma lista e exibe na tela. */
 
-        string filename = FILENAME + "-append.json";
+        string filename = FILENAME + "-list.json";
 
         Console.WriteLine($"Showing data from file {filename}");
 
@@ -32,10 +66,7 @@ internal class Program
 
         foreach(var user in users)
         {
-            // Show info
-            Console.WriteLine($"Name: {user.Name}");
-            Console.WriteLine($"E-mail: {user.Email}");
-            Console.WriteLine($"Age: {user.Age}\n");
+            user.ShowInfo();
         }
     }
 
@@ -89,7 +120,7 @@ internal class Program
 
         }
 
-        GerarArquivoJSONWithUserDataList(FILENAME + "-append.json", users);
+        GerarArquivoJSONWithUserDataList(FILENAME + "-list.json", users);
 
     }
 
@@ -145,7 +176,7 @@ internal class Program
 
         // Serializar a lista em JSON
         string jsonString = JsonSerializer.Serialize(users);
-        string filename = FILENAME + "-append.json";
+        string filename = FILENAME + "-list.json";
 
         File.WriteAllText(filename, jsonString);
 
@@ -253,9 +284,7 @@ internal class Program
         User user = JsonSerializer.Deserialize<User>(jsonString);
 
         // Show info
-        Console.WriteLine($"Name: {user.Name}");
-        Console.WriteLine($"Age: {user.Age}");
-        Console.WriteLine($"E-mail: {user.Email}");
+        user.ShowInfo();
 
     }
 

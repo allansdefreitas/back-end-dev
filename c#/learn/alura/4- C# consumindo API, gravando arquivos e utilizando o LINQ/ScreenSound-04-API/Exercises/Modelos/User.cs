@@ -9,4 +9,11 @@ public class User
 
     public int Age { get; set; }
 
+    public void ShowInfo()
+    {
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"E-mail: {Email}");
+        Console.WriteLine($"Age: {Age}\n");
+    }
+
 }
