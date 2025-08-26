@@ -11,8 +11,8 @@ internal class Program
     {
         //Exercise1();
         //Exercise2();
-        Exercise3MelhorSolucao();
-        //Exercise4();
+        //Exercise3MelhorSolucao();
+        Exercise4();
 
     }
 
@@ -21,8 +21,22 @@ internal class Program
         /* 4. Criar um programa que lê um arquivo JSON contendo informações de várias pessoas, ,
          * desserializa essas informações em uma lista e exibe na tela. */
 
+        string filename = FILENAME + "-append.json";
 
+        Console.WriteLine($"Showing data from file {filename}");
 
+        string jsonString = File.ReadAllText(filename);
+
+        // Desserializar JSON para objeto Pessoa
+        List<User> users = JsonSerializer.Deserialize<List<User>>(jsonString);
+
+        foreach(var user in users)
+        {
+            // Show info
+            Console.WriteLine($"Name: {user.Name}");
+            Console.WriteLine($"E-mail: {user.Email}");
+            Console.WriteLine($"Age: {user.Age}\n");
+        }
     }
 
     private static void Exercise3()
