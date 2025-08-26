@@ -66,7 +66,6 @@ internal class Program
                 //    Console.WriteLine(musica.KeyInt);
                 //}
 
-
                 var songsOnKeyCSharp = musicas
                     .Where(musica => musica.Key.Equals("C#"))
                     .ToList();
