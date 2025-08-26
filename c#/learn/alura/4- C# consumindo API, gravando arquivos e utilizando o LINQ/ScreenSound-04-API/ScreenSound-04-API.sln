@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GOT_API", "GOT_API\GOT_API.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{56F5B939-0CA3-43F7-90C6-1EAE2B4FD52E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises", "Exercises\Exercises.csproj", "{0A5A53B8-0FBE-4236-8E21-AC02110CD9DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{56F5B939-0CA3-43F7-90C6-1EAE2B4FD52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56F5B939-0CA3-43F7-90C6-1EAE2B4FD52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56F5B939-0CA3-43F7-90C6-1EAE2B4FD52E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5A53B8-0FBE-4236-8E21-AC02110CD9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5A53B8-0FBE-4236-8E21-AC02110CD9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5A53B8-0FBE-4236-8E21-AC02110CD9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5A53B8-0FBE-4236-8E21-AC02110CD9DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
