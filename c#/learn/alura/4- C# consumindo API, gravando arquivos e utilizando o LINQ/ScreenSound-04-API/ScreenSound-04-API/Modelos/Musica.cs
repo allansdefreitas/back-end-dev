@@ -21,7 +21,7 @@ internal class Musica
     public string? AnoString { get; set; }
 
     [JsonPropertyName("key")]
-    public int KeyInt { get; set; }
+    private int KeyInt { get; set; }
 
 
 

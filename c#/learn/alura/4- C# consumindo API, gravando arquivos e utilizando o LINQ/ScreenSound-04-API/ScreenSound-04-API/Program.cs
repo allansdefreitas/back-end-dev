@@ -58,13 +58,6 @@ internal class Program
                 GerarDocumentoTXTComAsMusicasFavoritas(playlistMathew);
                 GerarDocumentoXMLComAsMusicasFavoritas(playlistMathew);
 
-                //Console.Clear();
-                //Console.WriteLine($"Songs: \n");
-                //foreach (var musica in musicas)
-                //{
-                //    Console.WriteLine(musica.Key);
-                //    Console.WriteLine(musica.KeyInt);
-                //}
 
                 var songsOnKeyCSharp = musicas
                     .Where(musica => musica.Key.Equals("C#"))
