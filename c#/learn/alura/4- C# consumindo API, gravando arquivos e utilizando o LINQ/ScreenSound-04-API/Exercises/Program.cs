@@ -10,8 +10,8 @@ internal class Program
     private static void Main(string[] args)
     {
         //Exercise1();
-        Exercise2();
-        //Exercise3();
+        //Exercise2();
+        Exercise3MelhorSolucao();
         //Exercise4();
 
     }
@@ -44,7 +44,7 @@ internal class Program
             if (option.Equals("Y") || option.Equals("y"))
             {
                 Console.WriteLine();
-                Console.WriteLine("Type the ame: \n");
+                Console.WriteLine("Type the name: \n");
                 name = Console.ReadLine()!;
 
                 Console.WriteLine("Type the email: \n");
@@ -78,6 +78,66 @@ internal class Program
         GerarArquivoJSONWithUserDataList(FILENAME + "-append.json", users);
 
     }
+
+    private static void Exercise3MelhorSolucao()
+    {
+        /* 3. Criar um programa que permite ao usuário inserir informações de várias pessoas, 
+         * armazena essas informações em uma lista, serializa a lista em formato JSON e salva
+         * em um arquivo */
+
+        string name, email, option;
+        int age;
+
+        List<User> users = new List<User>();
+
+        while (true)
+        {
+            Console.WriteLine("Do you want enter a user? (Y | N) ");
+            option = Console.ReadLine()!;
+
+            if (option.Equals("Y") || option.Equals("y"))
+            {
+                Console.WriteLine();
+                Console.WriteLine("Type the name: \n");
+                name = Console.ReadLine()!;
+
+                Console.WriteLine("Type the email: \n");
+                email = Console.ReadLine()!;
+
+                Console.WriteLine("Type the age: \n");
+                string ageString = Console.ReadLine()!;
+                age = int.Parse(ageString);
+
+                User user = new User();
+                user.Name = name;
+                user.Email = email;
+                user.Age = age;
+
+                users.Add(user);
+
+                Console.Clear();
+
+            }
+            else if (option.Equals("N") || option.Equals("n"))
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Wrong option! Type another option!");
+            }
+
+        }
+
+        // Serializar a lista em JSON
+        string jsonString = JsonSerializer.Serialize(users);
+        string filename = FILENAME + "-append.json";
+
+        File.WriteAllText(filename, jsonString);
+
+    }
+
+  
 
     public static void Exercise2()
     {
