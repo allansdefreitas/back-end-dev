@@ -49,4 +49,6 @@ internal class Playlist
         Console.WriteLine($"Arquivo \"{nomeDoArquivo}\" JSON criado com sucesso em {Path.GetFullPath(nomeDoArquivo)}!");
     }
 
+
+
 }
