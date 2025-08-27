@@ -6,10 +6,22 @@ internal class Program
     {
         Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
 
-        TestArrayInt();
-        TestArrayString();
-        TestSearchWord();
-       
+        //TestArrayInt();
+        //TestArrayString();
+        //TestSearchWord();
+        //TestArrayInt2();
+
+
+
+        Array sample = Array.CreateInstance(typeof(double), 6);
+        sample.SetValue(7.5, 3);
+        sample.SetValue(7.9, 1);
+        sample.SetValue(8, 2);
+        sample.SetValue(9, 5);
+        sample.SetValue(10, 4);
+        sample.SetValue(9.9, 0);
+
+        CalculateMedian(sample);
 
 
     }
@@ -85,6 +97,30 @@ internal class Program
 
         double average = (double)agesSummation / ages.Length;
         Console.WriteLine($"The average of ages is {average}");
+
+    }
+
+
+    private static void CalculateMedian(Array array)
+    {
+
+        if(array == null || array.Length == 0)
+        {
+            Console.WriteLine("Array is empty or is null");
+        }
+
+        double[] sortedNumbers = (double[]) array.Clone();
+
+        Array.Sort(sortedNumbers);
+
+        int length = sortedNumbers.Length;
+        int middle = length / 2;
+
+        double median = (length % 2) != 0 ? sortedNumbers[middle] : 
+                ( (sortedNumbers[middle] + sortedNumbers[middle - 1])/2 );
+
+
+        Console.WriteLine($"The median is {median}");
 
     }
 }
