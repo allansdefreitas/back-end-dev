@@ -11,8 +11,6 @@ internal class Program
         //TestSearchWord();
         //TestArrayInt2();
 
-
-
         Array sample = Array.CreateInstance(typeof(double), 6);
         sample.SetValue(7.5, 3);
         sample.SetValue(7.9, 1);
@@ -22,8 +20,28 @@ internal class Program
         sample.SetValue(9.9, 0);
 
         CalculateMedian(sample);
+        CalculateAverage(sample);
 
 
+    }
+
+    private static void CalculateAverage(Array array)
+    {
+
+        if (array == null || array.Length == 0)
+        {
+            Console.WriteLine("Array is empty or is null");
+        }
+
+        double summation = 0;
+        foreach (var item in array)
+        {
+            summation += (double) item;
+        }
+
+        double average = summation / array.Length;
+
+        Console.WriteLine($"The average is {average}");
     }
 
     private static void TestSearchWord()
