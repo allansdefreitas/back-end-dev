@@ -10,7 +10,7 @@ internal class ArtistDAL
     {
         var list = new List<Artist>();
 
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string sqlQuery = "SELECT * FROM Artistas";
@@ -38,7 +38,7 @@ internal class ArtistDAL
     {
 
         Console.WriteLine("INSERT ==============================");
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string sqlString = "INSERT INTO Artistas (Nome, FotoPerfil, Bio) " +
@@ -58,7 +58,7 @@ internal class ArtistDAL
     {
 
         Console.WriteLine("UPDATE ==============================");
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string sqlString = "UPDATE Artistas " +
@@ -80,7 +80,7 @@ internal class ArtistDAL
     {
         Console.WriteLine("DELETE ==============================");
 
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string SqlString = "DELETE FROM Artistas " +

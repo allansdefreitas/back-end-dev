@@ -10,7 +10,7 @@ internal class SongDAL
     {
         var list = new List<Song>();
 
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string sqlQuery = "SELECT * FROM Musicas";
@@ -39,7 +39,7 @@ internal class SongDAL
     {
 
         Console.WriteLine("INSERT ==============================");
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string sqlString = "INSERT INTO Musicas (Nome) " +
@@ -57,7 +57,7 @@ internal class SongDAL
     {
 
         Console.WriteLine("UPDATE ==============================");
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string sqlString = "UPDATE Musicas " +
@@ -76,7 +76,7 @@ internal class SongDAL
     {
         Console.WriteLine("DELETE ==============================");
 
-        using var connection = new Connection().GetConnection();
+        using var connection = new ScreenSoundContext().GetConnection();
         connection.Open();
 
         string SqlString = "DELETE FROM Musicas " +
