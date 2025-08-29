@@ -6,12 +6,15 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-
         try
         {
-            using var connection = new Connection().ObterConexao();
-            connection.Open();
-            Console.WriteLine(connection.State);
+            var connection = new Connection();
+            var artists = connection.Listar();
+
+            foreach (var artist in artists)
+            {
+                Console.WriteLine(artist);
+            }
         }
         catch (Exception ex)
         {
