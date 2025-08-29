@@ -9,7 +9,33 @@ internal class Program
         try
         {
             var connection = new Connection();
-            var artists = connection.Listar();
+
+            Artist ozeiasDePaula = new Artist("Ozéias de Paula", "Cantor de música evangélica desde os anos 70.");
+
+
+            ArtistDAL.Add(ozeiasDePaula);
+
+
+
+            Artist victorinoSilva = new Artist("Victorino Silva", "É um cantor de música evangélica em atividade desde os anos 70. Muito" +
+                "conhecido por suas canções como \"Meu Tributo\", \"És\", \"Vale à Pena Viver\", dentre outras, bastante renomadas.");
+
+
+            ArtistDAL.Add(victorinoSilva);
+
+            victorinoSilva.Bio += "É reconhecido por seu estilo peculiar de canto, algumas canções com a presença de orquestras e potência vocal," +
+                "mesmo com idade avançada.";
+
+            victorinoSilva.Bio += "(...)";
+
+            victorinoSilva.Id = 1003;
+            ArtistDAL.Update(victorinoSilva);
+
+            ArtistDAL.Delete(1005); //Ozéias de Paula
+            ArtistDAL.Delete(1006); //Ozéias de Paula
+            ArtistDAL.Delete(1007); //Ozéias de Paula
+
+            var artists = ArtistDAL.ListAll();
 
             foreach (var artist in artists)
             {
@@ -23,12 +49,12 @@ internal class Program
 
         return;
 
-        Artista ira = new Artista("Ira!", "Banda Ira!");
-        Artista beatles = new("The Beatles", "Banda The Beatles");
+        Artist ira = new Artist("Ira!", "Banda Ira!");
+        Artist beatles = new("The Beatles", "Banda The Beatles");
 
-        Dictionary<string, Artista> artistasRegistrados = new();
-        artistasRegistrados.Add(ira.Nome, ira);
-        artistasRegistrados.Add(beatles.Nome, beatles);
+        Dictionary<string, Artist> artistasRegistrados = new();
+        artistasRegistrados.Add(ira.Name, ira);
+        artistasRegistrados.Add(beatles.Name, beatles);
 
         Dictionary<int, Menu> opcoes = new();
         opcoes.Add(1, new MenuRegistrarArtista());

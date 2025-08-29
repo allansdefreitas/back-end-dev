@@ -4,7 +4,7 @@ namespace ScreenSound.Menus;
 
 internal class MenuSair : Menu
 {
-    public override void Executar(Dictionary<string, Artista> artistasRegistrados)
+    public override void Executar(Dictionary<string, Artist> artistasRegistrados)
     {
         Console.WriteLine("Tchau tchau :)");
     }
