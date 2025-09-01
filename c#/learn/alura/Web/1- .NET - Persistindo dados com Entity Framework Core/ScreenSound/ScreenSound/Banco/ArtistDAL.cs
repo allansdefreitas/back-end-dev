@@ -28,21 +28,27 @@ internal class ArtistDAL
         context.SaveChanges();
     }
 
-    public void Delete(Artist artist) 
+    public void Delete(Artist artist)
     {
-        var artistFound = Get(artist.Id);
-
-        if(artistFound != null)
-        {
-            context.Artists.Remove(artistFound);
-            context.SaveChanges();
-        }
+        context.Artists.Remove(artist);
+        context.SaveChanges();
     }
 
     public Artist Get(int id)
     {
         return context.Artists.Find(id);
     }
+
+    public Artist GetByName(string name)
+    {
+        return context.Artists.FirstOrDefault(a => a.Name.Equals(name));
+    }
+
+    //public Artist GetByName(string theName)
+    //{
+    //    return (Artist) context.Artists.ToList()
+    //        .Where(name => name.Equals(theName));
+    //}
 
     public void PrintAll()
     {
