@@ -7,56 +7,9 @@ namespace ScreenSound.Banco;
 internal class SongDAL : DAL<Song>
 {
 
-    private readonly ScreenSoundContext context;
+    public SongDAL(ScreenSoundContext context) : base(context) { }
 
-    public SongDAL(ScreenSoundContext context)
-    {
-        this.context = context;
-    }
 
-    public override IEnumerable<Song> ListAll()
-    {
-        using var context = new ScreenSoundContext();
-        return context.Songs.ToList();
-    }
-
-    public override void Add(Song song)
-    {
-        context.Songs.Add(song);
-        context.SaveChanges();
-    }
-
-    public override void Update(Song song)
-    {
-        context.Songs.Update(song);
-        context.SaveChanges();
-    }
-
-    public override void Delete(Song song)
-    {
-        context.Songs.Remove(song);
-        context.SaveChanges();
-    }
-
-    public override Song Get(int id)
-    {
-        return context.Songs.Find(id);
-    }
-
-    public override Song? GetByName(string name)
-    {
-        return context.Songs.FirstOrDefault(a => a.Name.Equals(name));
-    }
-
-    public void PrintAll()
-    {
-        var songs = ListAll();
-        foreach (var song in songs)
-        {
-            Console.WriteLine(song);
-            Console.WriteLine("===================================");
-        }
-    }
 
     //public static IEnumerable<Song> ListAll()
     //{

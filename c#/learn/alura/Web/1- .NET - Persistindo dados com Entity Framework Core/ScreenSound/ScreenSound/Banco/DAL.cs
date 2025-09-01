@@ -1,19 +1,58 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+using ScreenSound.Banco;
 using ScreenSound.Modelos;
 
-internal abstract class DAL<T>
+internal abstract class DAL<T> where T : class
 {
 
-    public abstract IEnumerable<T> ListAll();
+    private readonly ScreenSoundContext context;
 
-    public abstract void Add(T obj);
+    public DAL(ScreenSoundContext context)
+    {
+        this.context = context;
+    }
 
-    public abstract void Update(T obj);
-    public abstract void Delete(T obj);
+    public IEnumerable<T> ListAll()
+    {
+        return context.Set<T>().ToList();
+    }
 
-    public abstract T Get(int id);
+    public void Add(T obj)
+    {
+        context.Set<T>().Add(obj);
+        context.SaveChanges();
+    }
 
-    public abstract T GetByName(string name);
+    public void Update(T obj)
+    {
+        context.Set<T>().Update(obj);
+        context.SaveChanges();
+    }
+    public void Delete(T obj)
+    {
+        context.Set<T>().Remove(obj);
+        context.SaveChanges();
+    }
 
+    public T? Get(int id)
+    {
+        return context.Set<T>().Find(id);
+    }
+
+    public T? GetByName(string name)
+    {
+        return context.Set<T>().FirstOrDefault(theName => theName.Equals(name));
+    }
+
+    public void PrintAll()
+    {
+        var objs = ListAll();
+        foreach (var obj in objs)
+        {
+            Console.WriteLine(obj);
+            Console.WriteLine("===================================");
+        }
+    }
 
 }
