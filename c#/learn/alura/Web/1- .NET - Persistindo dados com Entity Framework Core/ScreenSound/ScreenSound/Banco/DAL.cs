@@ -1,9 +1,7 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
 using ScreenSound.Banco;
-using ScreenSound.Modelos;
 
-internal abstract class DAL<T> where T : class
+internal class DAL<T> where T : class
 {
 
     private readonly ScreenSoundContext context;
@@ -40,9 +38,9 @@ internal abstract class DAL<T> where T : class
         return context.Set<T>().Find(id);
     }
 
-    public T? GetByName(string name)
+    public T? GetBy(Func<T, bool> condition)
     {
-        return context.Set<T>().FirstOrDefault(theName => theName.Equals(name));
+        return context.Set<T>().FirstOrDefault(condition);
     }
 
     public void PrintAll()

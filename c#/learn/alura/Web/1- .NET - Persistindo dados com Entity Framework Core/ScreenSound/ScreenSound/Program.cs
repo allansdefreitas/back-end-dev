@@ -4,9 +4,6 @@ using ScreenSound.Modelos;
 
 internal class Program
 {
-
-
-
     private static void Main(string[] args)
     {
 
@@ -86,18 +83,21 @@ internal class Program
 
         //return;
 
-        Artist ira = new Artist("", "Banda Ira!");
-        Artist beatles = new("The Beatles", "Banda The Beatles");
+        Artist ozeiasDePaula = new Artist("Ozéias de Paula", "Cantor de música evangélica desde os anos 70.");
+        Artist victorinoSilva = new Artist("Victorino Silva", "É um cantor de música evangélica em atividade desde os anos 70. Muito" +
+            "conhecido por suas canções como \"Meu Tributo\", \"És\", \"Vale à Pena Viver\", dentre outras, bastante renomadas.");
 
-        Dictionary<string, Artist> artistasRegistrados = new();
+        var maraLima = new Artist(
+            "Mara Lima",
+            "Cantora de música cristã evangélica desde os anos 80. Conhecida por suas canções marcantes ao longo da carreira, como \"Daniel\", \"Heroi sem Medalha\", \"Cavaleiro da Paz\", dentre outras."
+        );
 
         var context = new ScreenSoundContext();
-        ArtistDAL artistDAL = new ArtistDAL(context);
-        //artistDAL.Add(ira);
-        //artistDAL.Add(beatles);
+        DAL<Artist> artistDAL = new DAL<Artist>(context);
 
-        //artistasRegistrados.Add(ira.Name, ira);
-        //artistasRegistrados.Add(beatles.Name, beatles);
+        artistDAL.Add(ozeiasDePaula);
+        artistDAL.Add(victorinoSilva);
+        artistDAL.Add(maraLima);
 
         Dictionary<int, Menu> opcoes = new();
         opcoes.Add(1, new MenuRegistrarArtista());
