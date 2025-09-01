@@ -1,5 +1,8 @@
-﻿namespace ScreenSound.Modelos;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
+namespace ScreenSound.Modelos;
+
+[Table("Musicas")]
 internal class Song
 {
     public Song(string name)
@@ -7,6 +10,7 @@ internal class Song
         Name = name;
     }
 
+    [Column("Nome")]
     public string Name { get; set; }
     public int Id { get; set; }
 

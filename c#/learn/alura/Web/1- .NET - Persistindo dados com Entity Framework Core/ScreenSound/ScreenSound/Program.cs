@@ -7,57 +7,78 @@ internal class Program
     private static void Main(string[] args)
     {
 
-        Song song = new Song("Juízo Final");
+        //Song song = new Song("Juízo Final");
 
-        SongDAL.Add(song);
+        //SongDAL.Add(song);
 
-        song.Id = 1;
-        song.Name = "Sempre Alerta";
-        SongDAL.Update(song);
+        //song.Id = 1;
+        //song.Name = "Sempre Alerta";
+        //SongDAL.Update(song);
 
-        song.Id = 4;
-        song.Name = "O Senhor Pelejará por Nós";
-        SongDAL.Update(song);
+        //song.Id = 4;
+        //song.Name = "O Senhor Pelejará por Nós";
+        //SongDAL.Update(song);
 
 
-        song.Id = 3;
-        SongDAL.Delete(song.Id);
+        //song.Id = 3;
+        //SongDAL.Delete(song.Id);
 
-        var songs = SongDAL.ListAll();
+        //var songs = SongDAL.ListAll();
 
-        foreach (var ithSong in songs)
+        //foreach (var ithSong in songs)
+        //{
+        //    Console.WriteLine(ithSong);
+        //}
+        //return;
+
+        var context = new ScreenSoundContext();
+        var artistDAL = new ArtistDAL(context);
+
+
+        var maraLima = new Artist("Mara Lima", "Cantora de música evangélica desde os anos 80.")
         {
-            Console.WriteLine(ithSong);
-        }
-        return;
+            Id = 1009
+        };
+
+        //artistDAL.Add(maraLima);
+
+        //maraLima.Bio = "Cantora de música cristã evangélica desde os anos 80. Conhecida por suas canções marcantes" +
+        //    "ao longo da carreira, como, \"Daniel\", " +
+        //    "\"Heroi sem Medalha\", \"Cavaleiro da Paz\", dentre outras.";
+
+        //artistDAL.Update(maraLima);
+
+        artistDAL.Delete(maraLima);
+
+        artistDAL.PrintAll();
 
 
-        Artist ozeiasDePaula = new Artist("Ozéias de Paula", "Cantor de música evangélica desde os anos 70.");
+        //Artist ozeiasDePaula = new Artist("Ozéias de Paula", "Cantor de música evangélica desde os anos 70.");
 
-        ArtistDAL.Add(ozeiasDePaula);
-        Artist victorinoSilva = new Artist("Victorino Silva", "É um cantor de música evangélica em atividade desde os anos 70. Muito" +
-            "conhecido por suas canções como \"Meu Tributo\", \"És\", \"Vale à Pena Viver\", dentre outras, bastante renomadas.");
+        //ArtistDAL.Add(ozeiasDePaula);
+        //Artist victorinoSilva = new Artist("Victorino Silva", "É um cantor de música evangélica em atividade desde os anos 70. Muito" +
+        //    "conhecido por suas canções como \"Meu Tributo\", \"És\", \"Vale à Pena Viver\", dentre outras, bastante renomadas.");
 
-        ArtistDAL.Add(victorinoSilva);
+        //ArtistDAL.Add(victorinoSilva);
 
-        victorinoSilva.Bio += "É reconhecido por seu estilo peculiar de canto, algumas canções com a presença de orquestras e potência vocal," +
-            "mesmo com idade avançada.";
+        //victorinoSilva.Bio += "É reconhecido por seu estilo peculiar de canto, algumas canções com a presença de orquestras e potência vocal," +
+        //    "mesmo com idade avançada.";
 
-        victorinoSilva.Bio += "(...)";
+        //victorinoSilva.Bio += "(...)";
 
-        victorinoSilva.Id = 1003;
-        ArtistDAL.Update(victorinoSilva);
+        //victorinoSilva.Id = 1003;
+        //ArtistDAL.Update(victorinoSilva);
 
-        ArtistDAL.Delete(1005); //Ozéias de Paula
-        ArtistDAL.Delete(1006); //Ozéias de Paula
-        ArtistDAL.Delete(1007); //Ozéias de Paula
+        //ArtistDAL.Delete(1005); //Ozéias de Paula
+        //ArtistDAL.Delete(1006); //Ozéias de Paula
+        //ArtistDAL.Delete(1007); //Ozéias de Paula
 
-        var artists = ArtistDAL.ListAll();
+        //var artists = ArtistDAL.ListAll();
 
-        foreach (var artist in artists)
-        {
-            Console.WriteLine(artist);
-        }
+        //foreach (var artist in artists)
+        //{
+        //    Console.WriteLine(artist);
+        //}
 
 
         return;

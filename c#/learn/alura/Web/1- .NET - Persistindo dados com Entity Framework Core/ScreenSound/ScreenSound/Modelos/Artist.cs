@@ -1,5 +1,8 @@
-﻿namespace ScreenSound.Modelos; 
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
+namespace ScreenSound.Modelos;
+
+[Table("Artistas")]
 internal class Artist 
 {
     private List<Song> songs = new List<Song>();
@@ -11,8 +14,13 @@ internal class Artist
         ProfilePicture = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png";
     }
 
+    [Column("Nome")]
     public string Name { get; set; }
+    
+    [Column("FotoPerfil")]
     public string ProfilePicture { get; set; }
+
+    [Column("Bio")]
     public string Bio { get; set; }
     public int Id { get; set; }
 
