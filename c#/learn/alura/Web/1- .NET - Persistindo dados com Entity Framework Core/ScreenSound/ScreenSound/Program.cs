@@ -6,9 +6,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        ScreenSoundContext context = new ScreenSoundContext();
+        DAL<Artist> artistDAL = new DAL<Artist>(context);
+        DAL<Song> songDAL = new DAL<Song>(context);
 
         //Song song = new Song("Juízo Final");
-
         //SongDAL.Add(song);
 
         //song.Id = 1;
@@ -92,8 +94,7 @@ internal class Program
             "Cantora de música cristã evangélica desde os anos 80. Conhecida por suas canções marcantes ao longo da carreira, como \"Daniel\", \"Heroi sem Medalha\", \"Cavaleiro da Paz\", dentre outras."
         );
 
-        var context = new ScreenSoundContext();
-        DAL<Artist> artistDAL = new DAL<Artist>(context);
+
 
         artistDAL.Add(ozeiasDePaula);
         artistDAL.Add(victorinoSilva);
@@ -136,7 +137,7 @@ internal class Program
             if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
             {
                 Menu menuASerExibido = opcoes[opcaoEscolhidaNumerica];
-                
+
                 menuASerExibido.Executar(artistDAL);
                 if (opcaoEscolhidaNumerica > 0) ExibirOpcoesDoMenu();
             }
