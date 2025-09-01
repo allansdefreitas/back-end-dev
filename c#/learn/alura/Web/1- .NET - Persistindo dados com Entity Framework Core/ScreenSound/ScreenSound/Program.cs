@@ -4,6 +4,9 @@ using ScreenSound.Modelos;
 
 internal class Program
 {
+
+
+
     private static void Main(string[] args)
     {
 
@@ -31,14 +34,14 @@ internal class Program
         //}
         //return;
 
-        var context = new ScreenSoundContext();
-        var artistDAL = new ArtistDAL(context);
+        //var context = new ScreenSoundContext();
+        //var artistDAL = new ArtistDAL(context);
 
 
-        var maraLima = new Artist("Mara Lima", "Cantora de música evangélica desde os anos 80.")
-        {
-            Id = 1009
-        };
+        //var maraLima = new Artist("Mara Lima", "Cantora de música evangélica desde os anos 80.")
+        //{
+        //    Id = 1009
+        //};
 
         //artistDAL.Add(maraLima);
 
@@ -48,9 +51,9 @@ internal class Program
 
         //artistDAL.Update(maraLima);
 
-        artistDAL.Delete(maraLima);
+        //artistDAL.Delete(maraLima);
 
-        artistDAL.PrintAll();
+        //artistDAL.PrintAll();
 
 
         //Artist ozeiasDePaula = new Artist("Ozéias de Paula", "Cantor de música evangélica desde os anos 70.");
@@ -81,14 +84,20 @@ internal class Program
         //}
 
 
-        return;
+        //return;
 
-        Artist ira = new Artist("Ira!", "Banda Ira!");
+        Artist ira = new Artist("", "Banda Ira!");
         Artist beatles = new("The Beatles", "Banda The Beatles");
 
         Dictionary<string, Artist> artistasRegistrados = new();
-        artistasRegistrados.Add(ira.Name, ira);
-        artistasRegistrados.Add(beatles.Name, beatles);
+
+        var context = new ScreenSoundContext();
+        ArtistDAL artistDAL = new ArtistDAL(context);
+        //artistDAL.Add(ira);
+        //artistDAL.Add(beatles);
+
+        //artistasRegistrados.Add(ira.Name, ira);
+        //artistasRegistrados.Add(beatles.Name, beatles);
 
         Dictionary<int, Menu> opcoes = new();
         opcoes.Add(1, new MenuRegistrarArtista());
@@ -127,7 +136,8 @@ internal class Program
             if (opcoes.ContainsKey(opcaoEscolhidaNumerica))
             {
                 Menu menuASerExibido = opcoes[opcaoEscolhidaNumerica];
-                menuASerExibido.Executar(artistasRegistrados);
+                
+                menuASerExibido.Executar(artistDAL);
                 if (opcaoEscolhidaNumerica > 0) ExibirOpcoesDoMenu();
             }
             else
