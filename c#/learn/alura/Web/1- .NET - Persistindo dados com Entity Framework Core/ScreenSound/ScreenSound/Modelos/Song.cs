@@ -14,6 +14,8 @@ internal class Song
     public string Name { get; set; }
     public int Id { get; set; }
 
+    public int ReleaseYear { get; set; }
+
     public void ShowTechnicalSheet()
     {
         Console.WriteLine($"Name: {Name}");
@@ -24,5 +26,6 @@ internal class Song
     {
         return @$"Id: {Id}
         Name: {Name}";
+
     }
 }
