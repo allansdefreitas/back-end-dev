@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ScreenSound.Banco;
 
@@ -10,9 +11,11 @@ using ScreenSound.Banco;
 namespace ScreenSound.Migrations
 {
     [DbContext(typeof(ScreenSoundContext))]
-    partial class ScreenSoundContextModelSnapshot : ModelSnapshot
+    [Migration("20250902183946_RelacionarArtistaMusica")]
+    partial class RelacionarArtistaMusica
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +49,7 @@ namespace ScreenSound.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Artistas", (string)null);
+                    b.ToTable("Artistas");
                 });
 
             modelBuilder.Entity("ScreenSound.Modelos.Song", b =>
@@ -72,7 +75,7 @@ namespace ScreenSound.Migrations
 
                     b.HasIndex("artistId");
 
-                    b.ToTable("Musicas", (string)null);
+                    b.ToTable("Musicas");
                 });
 
             modelBuilder.Entity("ScreenSound.Modelos.Song", b =>

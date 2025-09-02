@@ -16,16 +16,16 @@ internal class Song
 
     public int ReleaseYear { get; set; }
 
+    public Artist? artist { get; set; }
+
     public void ShowTechnicalSheet()
     {
         Console.WriteLine($"Name: {Name}");
-      
     }
 
     public override string ToString()
     {
         return @$"Id: {Id}
         Name: {Name}";
-
     }
 }

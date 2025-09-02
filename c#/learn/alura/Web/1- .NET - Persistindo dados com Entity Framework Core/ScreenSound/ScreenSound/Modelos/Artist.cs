@@ -3,9 +3,9 @@
 namespace ScreenSound.Modelos;
 
 [Table("Artistas")]
-internal class Artist 
+internal class Artist
 {
-    private List<Song> songs = new List<Song>();
+    public ICollection<Song> Songs { get; set; } = new List<Song>();    
 
     public Artist(string name, string bio)
     {
@@ -16,7 +16,7 @@ internal class Artist
 
     [Column("Nome")]
     public string Name { get; set; }
-    
+
     [Column("FotoPerfil")]
     public string ProfilePicture { get; set; }
 
@@ -26,13 +26,13 @@ internal class Artist
 
     public void AddSong(Song song)
     {
-        songs.Add(song);
+        Songs.Add(song);
     }
 
     public void ShowDiscography()
     {
         Console.WriteLine($"Discography of artist {Name}");
-        foreach (var song in songs)
+        foreach (var song in Songs)
         {
             Console.WriteLine($"Song: {song.Name}");
         }
