@@ -19,7 +19,14 @@ internal class MenuRegistrarMusica : Menu
             Console.Write("Agora digite o título da música: ");
             string tituloDaMusica = Console.ReadLine()!;
 
-            artistFound.AddSong(new Song(tituloDaMusica));
+            Console.Write("Digite o ano de lançamento: ");
+            string releaseYear = Console.ReadLine()!;
+
+            Song song = new Song(tituloDaMusica, Convert.ToInt32(releaseYear));
+            artistFound.AddSong(song);
+
+            artistDAL.Update(artistFound);
+
             Console.WriteLine($"A música {tituloDaMusica} de {artistName} foi registrada com sucesso!");
             Thread.Sleep(4000);
             Console.Clear();

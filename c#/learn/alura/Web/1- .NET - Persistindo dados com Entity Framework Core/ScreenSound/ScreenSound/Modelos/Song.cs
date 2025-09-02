@@ -3,11 +3,13 @@
 namespace ScreenSound.Modelos;
 
 [Table("Musicas")]
-internal class Song
+public class Song
 {
-    public Song(string name)
+
+    public Song(string name, int releaseYear)
     {
         Name = name;
+        ReleaseYear = releaseYear;
     }
 
     [Column("Nome")]
@@ -16,7 +18,7 @@ internal class Song
 
     public int ReleaseYear { get; set; }
 
-    public Artist? artist { get; set; }
+    public virtual Artist? Artist { get; set; }
 
     public void ShowTechnicalSheet()
     {
