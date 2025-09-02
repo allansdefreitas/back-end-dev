@@ -43,6 +43,11 @@ internal class DAL<T> where T : class
         return context.Set<T>().FirstOrDefault(condition);
     }
 
+    public IEnumerable<T> ListBy(Func<T, bool> condition)
+    {
+        return context.Set<T>().Where(condition);
+    }
+
     public void PrintAll()
     {
         var objs = ListAll();
