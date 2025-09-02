@@ -85,18 +85,18 @@ internal class Program
 
         //return;
 
-        //Artist ozeiasDePaula = new Artist("Ozéias de Paula", "Cantor de música evangélica desde os anos 70.");
-        //Artist victorinoSilva = new Artist("Victorino Silva", "É um cantor de música evangélica em atividade desde os anos 70. Muito" +
-        //    "conhecido por suas canções como \"Meu Tributo\", \"És\", \"Vale à Pena Viver\", dentre outras, bastante renomadas.");
+        Artist ozeiasDePaula = new Artist("Ozéias de Paula", "Cantor de música evangélica desde os anos 70.");
+        Artist victorinoSilva = new Artist("Victorino Silva", "É um cantor de música evangélica em atividade desde os anos 70. Muito" +
+            "conhecido por suas canções como \"Meu Tributo\", \"És\", \"Vale à Pena Viver\", dentre outras, bastante renomadas.");
 
-        //var maraLima = new Artist(
-        //    "Mara Lima",
-        //    "Cantora de música cristã evangélica desde os anos 80. Conhecida por suas canções marcantes ao longo da carreira, como \"Daniel\", \"Heroi sem Medalha\", \"Cavaleiro da Paz\", dentre outras."
-        //);
+        var maraLima = new Artist(
+            "Mara Lima",
+            "Cantora de música cristã evangélica desde os anos 80. Conhecida por suas canções marcantes ao longo da carreira, como \"Daniel\", \"Heroi sem Medalha\", \"Cavaleiro da Paz\", dentre outras."
+        );
 
-        //artistDAL.Add(ozeiasDePaula);
-        //artistDAL.Add(victorinoSilva);
-        //artistDAL.Add(maraLima);
+        artistDAL.Add(ozeiasDePaula);
+        artistDAL.Add(victorinoSilva);
+        artistDAL.Add(maraLima);
 
         Dictionary<int, Menu> opcoes = new();
         opcoes.Add(1, new MenuRegistrarArtista());
