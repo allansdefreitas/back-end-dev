@@ -1,4 +1,6 @@
 ﻿
+using ScreenSound.Modelos;
+
 namespace ScreenSound.Shared.Modelos.Modelos;
 
 public class Genre
@@ -6,6 +8,7 @@ public class Genre
     public int Id { get; set; }
     public string? Name { get; set; } = string.Empty;
     public string? Description { get; set; } = string.Empty;
+    public virtual ICollection<Song> Songs { get; set; }
 
     public override string ToString()
     {

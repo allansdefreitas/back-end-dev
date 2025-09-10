@@ -18,4 +18,11 @@ public class ScreenSoundContext: DbContext
             .UseSqlServer(connectionString)
             .UseLazyLoadingProxies(false);
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Song>()
+            .HasMany(c => c.Genders)
+            .WithMany(c => c.Songs);
+    }
 }

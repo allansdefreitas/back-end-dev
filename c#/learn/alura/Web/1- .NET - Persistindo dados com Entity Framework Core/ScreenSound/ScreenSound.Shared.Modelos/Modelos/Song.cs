@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using ScreenSound.Shared.Modelos.Modelos;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScreenSound.Modelos;
 
@@ -19,6 +20,8 @@ public class Song
     public int ReleaseYear { get; set; }
 
     public virtual Artist? Artist { get; set; }
+
+    public virtual ICollection<Genre> Genders { get; set; }
 
     public void ShowTechnicalSheet()
     {
