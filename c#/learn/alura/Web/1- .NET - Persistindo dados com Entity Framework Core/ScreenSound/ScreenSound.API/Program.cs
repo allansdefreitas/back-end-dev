@@ -34,11 +34,61 @@ internal class Program
             return Results.Ok(artist);
         });
 
+        app.MapGet("/Artists/{id:int}", ([FromServices] DAL<Artist> dal, int id) =>
+        {
+            var artist = dal.GetBy(a => a.Id == id);
+            if (artist is null)
+            {
+                return Results.NotFound();
+            }
+            else
+            {
+                Console.WriteLine("artist: " + artist);
+                return Results.Ok(artist);
+            }
+        });
+
         app.MapPost("/Artists", ([FromServices] DAL<Artist> dal, [FromBody] Artist artist) =>
         {
             dal.Add(artist);
 
             return Results.Ok(artist);
+
+        });
+
+        app.MapDelete("/Artists/{id}", ([FromServices] DAL<Artist> dal, int id) =>
+        {
+            var artist = dal.GetBy(a => a.Id == id);
+            if (artist is null)
+            {
+                return Results.NotFound();
+            }
+            else
+            {
+                dal.Delete(artist);
+                return Results.NoContent();
+            }
+
+        });
+
+        app.MapPut("/Artists", ([FromServices] DAL<Artist> dal, [FromBody] Artist artist) =>
+        {
+            var artistFound = dal.GetBy(a => a.Id == artist.Id);
+            if (artistFound is null)
+            {
+                return Results.NotFound();
+            }
+            else
+            {
+                artistFound.Id = artist.Id;
+                artistFound.Name = artist.Name;
+                artistFound.ProfilePicture = artist.ProfilePicture;
+                artistFound.Bio = artist.Bio;
+                artistFound.Songs = artist.Songs;
+
+                dal.Update(artistFound);
+                return Results.Ok(artistFound);
+            }
 
         });
 
