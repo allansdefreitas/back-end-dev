@@ -3,7 +3,7 @@ using ScreenSound.Modelos;
 
 namespace ScreenSound.Banco;
 
-internal class ScreenSoundContext: DbContext
+public class ScreenSoundContext: DbContext
 {
     public DbSet<Artist> Artists { get; set; }
     public DbSet<Song> Songs { get; set; }
@@ -14,6 +14,6 @@ internal class ScreenSoundContext: DbContext
     {
         optionsBuilder
             .UseSqlServer(connectionString)
-            .UseLazyLoadingProxies();
+            .UseLazyLoadingProxies(false);
     }
 }
