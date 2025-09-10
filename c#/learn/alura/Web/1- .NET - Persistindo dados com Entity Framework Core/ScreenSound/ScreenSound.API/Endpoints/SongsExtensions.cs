@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ScreenSound.API.Requests;
+using ScreenSound.API.Response;
 using ScreenSound.Modelos;
 
 namespace ScreenSound.API.Endpoints;
@@ -12,6 +13,7 @@ public static class SongsExtensions
     {
         app.MapGet("/Songs", ([FromServices] DAL<Song> dal) =>
         {
+            //var songsResponseList = EntityListToResponseList(dal.ListAll());
             return Results.Ok(dal.ListAll());
         });
 
@@ -95,4 +97,14 @@ public static class SongsExtensions
 
 
     }
+    private static ICollection<SongResponse> EntityListToResponseList(IEnumerable<Song> songsList)
+    {
+        return songsList.Select(a => EntityToResponse(a)).ToList();
+    }
+
+    private static SongResponse EntityToResponse(Song song)
+    {
+        return new SongResponse(song.Id, song.Name!, song.Artist!.Id, song.Artist.Name, song.ReleaseYear);
+    }
+
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ScreenSound.API.Requests;
+using ScreenSound.API.Response;
 using ScreenSound.Modelos;
 
 namespace ScreenSound.API.Endpoints;
@@ -89,5 +90,14 @@ public static class ArtistsExtensions
                 return Results.Ok(artistFound);
             }
         });
+    }
+    private static ICollection<ArtistResponse> EntityListToResponseList(IEnumerable<Artist> artistsList)
+    {
+        return artistsList.Select(a => EntityToResponse(a)).ToList();
+    }
+
+    private static ArtistResponse EntityToResponse(Artist artist)
+    {
+        return new ArtistResponse(artist.Id, artist.Name, artist.Bio, artist.ProfilePicture);
     }
 }
