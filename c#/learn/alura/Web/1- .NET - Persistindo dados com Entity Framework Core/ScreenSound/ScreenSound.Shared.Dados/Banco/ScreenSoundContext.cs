@@ -22,7 +22,7 @@ public class ScreenSoundContext: DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Song>()
-            .HasMany(c => c.Genders)
+            .HasMany(c => c.Genres)
             .WithMany(c => c.Songs);
     }
 }

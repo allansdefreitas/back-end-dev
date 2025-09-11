@@ -10,6 +10,12 @@ public class Genre
     public string? Description { get; set; } = string.Empty;
     public virtual ICollection<Song> Songs { get; set; }
 
+    public Genre(string? name, string? description)
+    {
+        Name = name;
+        Description = description;
+    }
+
     public override string ToString()
     {
         return $"Nome: {Name} - Descrição: {Description}";

@@ -7,6 +7,12 @@ namespace ScreenSound.Modelos;
 public class Song
 {
 
+
+    public Song(string name)
+    {
+        Name = name;
+    }
+
     public Song(string name, int releaseYear)
     {
         Name = name;
@@ -21,7 +27,9 @@ public class Song
 
     public virtual Artist? Artist { get; set; }
 
-    public virtual ICollection<Genre> Genders { get; set; }
+    public int? ArtistId { get; set; }
+
+    public virtual ICollection<Genre> Genres { get; set; }
 
     public void ShowTechnicalSheet()
     {

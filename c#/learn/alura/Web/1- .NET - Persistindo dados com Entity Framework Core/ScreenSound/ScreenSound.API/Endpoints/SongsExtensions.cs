@@ -2,6 +2,7 @@
 using ScreenSound.API.Requests;
 using ScreenSound.API.Response;
 using ScreenSound.Modelos;
+using ScreenSound.Shared.Modelos.Modelos;
 
 namespace ScreenSound.API.Endpoints;
 
@@ -44,10 +45,20 @@ public static class SongsExtensions
             }
         });
 
-        app.MapPost("/Songs", ([FromServices] DAL<Song> dal, [FromBody] SongRequest songRequest) =>
+        app.MapPost("/Songs", ([FromServices] DAL<Song> dal,
+            [FromServices] DAL <Genre> dalGenre,
+            [FromBody] SongRequest songRequest) =>
         {
 
-            var song = new Song(songRequest.name, songRequest.releaseYear);
+            var song = new Song(songRequest.name)
+            {
+                ArtistId = songRequest.artistId,
+                ReleaseYear = songRequest.releaseYear,
+                Genres = songRequest.genres is not null ? 
+                    GenreRequestConverter(songRequest.genres, dalGenre) :
+                    new List<Genre>(),
+            };
+
             dal.Add(song);
 
             return Results.Ok(song);
@@ -97,6 +108,30 @@ public static class SongsExtensions
 
 
     }
+
+    private static ICollection<Genre> GenreRequestConverter(ICollection<GenreRequest> genresRequest, DAL<Genre> dalGenre)
+    {
+        //ICollection<Genre> genresEntity = new List<Genre>();
+        //foreach (var genreRequest in genresRequest)
+        //{
+        //    Genre genre = RequestToEntity(genreRequest);
+        //    genresEntity.Add(genre);
+
+        //}
+        //return genresEntity;
+
+        // Ou
+        return genresRequest.Select(a => RequestToEntity(a)).ToList();
+    }
+
+
+    private static Genre RequestToEntity(GenreRequest genreRequest)
+    {
+        Genre genre = new Genre(genreRequest.name, genreRequest.description);
+
+        return genre;
+    }
+
     private static ICollection<SongResponse> EntityListToResponseList(IEnumerable<Song> songsList)
     {
         return songsList.Select(a => EntityToResponse(a)).ToList();

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using ScreenSound.API.Endpoints;
 using ScreenSound.Banco;
 using ScreenSound.Modelos;
+using ScreenSound.Shared.Modelos.Modelos;
 using System.Text.Json.Serialization;
 
 internal class Program
@@ -13,6 +14,7 @@ internal class Program
         builder.Services.AddDbContext<ScreenSoundContext>();
         builder.Services.AddTransient<DAL<Artist>>();
         builder.Services.AddTransient<DAL<Song>>();
+        builder.Services.AddTransient<DAL<Genre>>();
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
@@ -24,6 +26,7 @@ internal class Program
    
         ArtistsExtensions.AddEndpointsArtists(app);
         SongsExtensions.AddEndpointsSongs(app);
+        GenresExtensions.AddEndpointsGenres(app);
 
 
         app.UseSwagger();
