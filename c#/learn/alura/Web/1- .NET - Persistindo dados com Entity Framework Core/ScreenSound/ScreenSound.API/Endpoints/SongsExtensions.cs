@@ -109,19 +109,29 @@ public static class SongsExtensions
 
     }
 
+    //O existente vai persistir com id, o que gera update e o novo vai gerar insert, já que vem sem ID.
+    //Essa solução proposta pelo professor, utilizando código em vez de mecanismos apropriados do EF Core, não está boa!
     private static ICollection<Genre> GenreRequestConverter(ICollection<GenreRequest> genresRequest, DAL<Genre> dalGenre)
     {
-        //ICollection<Genre> genresEntity = new List<Genre>();
-        //foreach (var genreRequest in genresRequest)
-        //{
-        //    Genre genre = RequestToEntity(genreRequest);
-        //    genresEntity.Add(genre);
+    
+        var genresList = new List<Genre>();
 
-        //}
-        //return genresEntity;
+        foreach (var genre in genresRequest)
+        {
+            var entity = RequestToEntity(genre);
 
-        // Ou
-        return genresRequest.Select(a => RequestToEntity(a)).ToList();
+            var entityFound = dalGenre.GetBy(g => g.Name.ToUpper().Equals( entity.Name.ToUpper() ) );
+            if (entityFound is not null)
+            {
+                genresList.Add(entityFound);
+            }
+            else
+            {
+                genresList.Add(entity);
+            }
+        }
+
+        return genresList;
     }
 
 
