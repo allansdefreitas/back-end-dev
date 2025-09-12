@@ -1,3 +1,3 @@
 ﻿namespace ScreenSound.API.Response;
 
-public record ArtistResponse(int id, string Name, string Bio, string? ProfilePicture);
+public record ArtistResponse(int Id, string Name, string Bio, string? ProfilePicture);

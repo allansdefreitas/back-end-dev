@@ -2,4 +2,4 @@
 
 namespace ScreenSound.API.Requests;
 
-public record SongRequest(string name, int artistId, int releaseYear, ICollection<GenreRequest> genres = null);
+public record SongRequest(string Name, int ArtistId, int ReleaseYear, ICollection<GenreRequest> Genres = null);

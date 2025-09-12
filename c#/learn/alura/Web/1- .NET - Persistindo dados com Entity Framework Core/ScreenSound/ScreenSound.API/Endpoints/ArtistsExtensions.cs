@@ -47,7 +47,7 @@ public static class ArtistsExtensions
 
         app.MapPost("/Artists", ([FromServices] DAL<Artist> dal, [FromBody] ArtistRequest artistRequest) =>
         {
-            var artist = new Artist(artistRequest.name, artistRequest.bio);
+            var artist = new Artist(artistRequest.Name, artistRequest.Bio);
 
             dal.Add(artist);
 
@@ -73,10 +73,10 @@ public static class ArtistsExtensions
         
         app.MapPut("/Artists", ([FromServices] DAL<Artist> dal, [FromBody] ArtistRequestEdit artistRequestEdit) =>
         {
-            var artist = new Artist(artistRequestEdit.name, artistRequestEdit.bio)
+            var artist = new Artist(artistRequestEdit.Name, artistRequestEdit.Bio)
             {
-                Id = artistRequestEdit.id,
-                ProfilePicture = artistRequestEdit.profilePicture,
+                Id = artistRequestEdit.Id,
+                ProfilePicture = artistRequestEdit.ProfilePicture,
             };
 
             var artistFound = dal.GetBy(a => a.Id == artist.Id);

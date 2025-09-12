@@ -1,3 +1,3 @@
 ﻿namespace ScreenSound.API.Requests;
 
-public record SongRequestEdit(int id, string name, int releaseYear);
+public record SongRequestEdit(int Id, string Name, int ReleaseYear);

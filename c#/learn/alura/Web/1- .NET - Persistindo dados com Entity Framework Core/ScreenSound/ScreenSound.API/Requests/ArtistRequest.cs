@@ -1,3 +1,3 @@
 ﻿namespace ScreenSound.API.Requests;
 
-public record ArtistRequest(string name, string bio);
+public record ArtistRequest(string Name, string Bio);

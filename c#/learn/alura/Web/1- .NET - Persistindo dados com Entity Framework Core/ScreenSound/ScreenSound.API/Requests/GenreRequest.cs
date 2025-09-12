@@ -1,3 +1,3 @@
 ﻿namespace ScreenSound.API.Requests;
 
-public record GenreRequest(string name, string description);
+public record GenreRequest(string Name, string Description);

@@ -75,7 +75,7 @@ public static class GenresExtensions
         app.MapPut("/Genres", ([FromServices] DAL<Genre> dal, [FromBody] GenreRequestEdit genreRequestEdit) =>
         {
 
-            var genre = new Genre(genreRequestEdit.name, genreRequestEdit.description);
+            var genre = new Genre(genreRequestEdit.Name, genreRequestEdit.Description);
 
             var genreFound = dal.GetBy(a => a.Id == genre.Id);
             if (genreFound is null)
@@ -102,7 +102,7 @@ public static class GenresExtensions
 
     private static Genre RequestToEntity(GenreRequest genreRequest)
     {
-        Genre genre = new Genre(genreRequest.name, genreRequest.description);
+        Genre genre = new Genre(genreRequest.Name, genreRequest.Description);
         return genre;
     }
 

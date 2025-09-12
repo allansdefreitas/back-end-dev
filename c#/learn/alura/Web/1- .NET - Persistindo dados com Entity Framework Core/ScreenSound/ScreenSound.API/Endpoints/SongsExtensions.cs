@@ -52,12 +52,17 @@ public static class SongsExtensions
 
             var song = new Song()
             {
-                Name = songRequest.name,
-                ReleaseYear = songRequest.releaseYear,
-                ArtistId = songRequest.artistId,
-                Genres = songRequest.genres is not null ? 
-                    GenreRequestConverter(songRequest.genres, dalGenre) :
+
+                Name = songRequest.Name,
+                ReleaseYear = songRequest.ReleaseYear,
+                ArtistId = songRequest.ArtistId,
+                Genres = songRequest.Genres is not null ? 
+                    GenreRequestConverter(songRequest.Genres, dalGenre) :
                     new List<Genre>(),
+                Artist = new Artist()
+                {
+                    Bio = "",
+                }
             };
 
             dal.Add(song);
@@ -84,9 +89,9 @@ public static class SongsExtensions
         app.MapPut("/Songs", ([FromServices] DAL<Song> dal, [FromBody] SongRequestEdit songRequestEdit) =>
         {
 
-            var song = new Song(songRequestEdit.name, songRequestEdit.releaseYear)
+            var song = new Song(songRequestEdit.Name, songRequestEdit.ReleaseYear)
             {
-                Id = songRequestEdit.id
+                Id = songRequestEdit.Id
             };
 
             var songFound = dal.GetBy(a => a.Id == song.Id);
@@ -137,7 +142,7 @@ public static class SongsExtensions
 
     private static Genre RequestToEntity(GenreRequest genreRequest)
     {
-        Genre genre = new Genre(genreRequest.name, genreRequest.description);
+        Genre genre = new Genre(genreRequest.Name, genreRequest.Description);
 
         return genre;
     }
@@ -150,7 +155,7 @@ public static class SongsExtensions
     private static SongResponse EntityToResponse(Song song)
     {
 
-        var songResponse = new SongResponse(song.Id, song.Name!, song.Artist!.Id, song.Artist.Name, song.ReleaseYear);
+        var songResponse = new SongResponse(song.Id, song.Name!, song.Artist!.Id, song.Artist.Name);
         return songResponse;
     }
 
