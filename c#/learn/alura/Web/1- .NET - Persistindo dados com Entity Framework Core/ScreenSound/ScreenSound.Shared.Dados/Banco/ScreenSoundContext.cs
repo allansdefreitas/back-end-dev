@@ -15,6 +15,11 @@ public class ScreenSoundContext : DbContext
 
 
 
+    public ScreenSoundContext()
+    {
+
+    }
+
     public ScreenSoundContext(DbContextOptions options) : base(options)
     {
 

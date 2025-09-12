@@ -4,7 +4,7 @@ using ScreenSound.Modelos;
 
 internal class MenuMostrarMusicasPorAno : Menu
 {
-    public override void Executar(DAL<Artist> artistDAL)
+    public void Executar(DAL<Artist> artistDAL)
     {
         base.Executar(artistDAL);
         ExibirTituloDaOpcao("Mostrar musicas por ano de lançamento");
