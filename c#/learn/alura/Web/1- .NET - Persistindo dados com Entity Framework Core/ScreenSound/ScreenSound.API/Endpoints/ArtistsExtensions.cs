@@ -12,20 +12,22 @@ public static class ArtistsExtensions
     {
         app.MapGet("/Artists", ([FromServices] DAL<Artist> dal) =>
         {
-            return Results.Ok(dal.ListAll());
+
+            var artistResponseList = EntityListToResponseList(dal.ListAll());
+            return Results.Ok(artistResponseList);
         });
 
         app.MapGet("/Artists/{name}", ([FromServices] DAL<Artist> dal, string name) =>
         {
-            var artist = dal.ListBy(a => a.Name.ToUpper().Equals(name.ToUpper()));
+            var artistList = dal.ListBy(a => a.Name.ToUpper().Equals(name.ToUpper()));
 
-            if (artist is null)
+            if (artistList is null)
             {
                 return Results.NotFound();
             }
 
-            Console.WriteLine("artist: " + artist);
-            return Results.Ok(artist);
+            var artistResponseList = EntityListToResponseList(artistList);
+            return Results.Ok(artistResponseList);
         });
 
         app.MapGet("/Artists/{id:int}", ([FromServices] DAL<Artist> dal, int id) =>
@@ -38,7 +40,8 @@ public static class ArtistsExtensions
             else
             {
                 Console.WriteLine("artist: " + artist);
-                return Results.Ok(artist);
+                var artistResponse = EntityToResponse(artist);
+                return Results.Ok(artistResponse);
             }
         });
 
@@ -47,7 +50,9 @@ public static class ArtistsExtensions
             var artist = new Artist(artistRequest.name, artistRequest.bio);
 
             dal.Add(artist);
-            return Results.Ok();
+
+            var artistResponse = EntityToResponse(artist);
+            return Results.Ok(artistResponse);
 
         });
 
@@ -70,7 +75,8 @@ public static class ArtistsExtensions
         {
             var artist = new Artist(artistRequestEdit.name, artistRequestEdit.bio)
             {
-                Id = artistRequestEdit.id
+                Id = artistRequestEdit.id,
+                ProfilePicture = artistRequestEdit.profilePicture,
             };
 
             var artistFound = dal.GetBy(a => a.Id == artist.Id);
@@ -87,7 +93,9 @@ public static class ArtistsExtensions
                 artistFound.Songs = artist.Songs;
 
                 dal.Update(artistFound);
-                return Results.Ok(artistFound);
+
+                var artistFoundResponse = EntityToResponse(artistFound);
+                return Results.Ok(artistFoundResponse);
             }
         });
     }

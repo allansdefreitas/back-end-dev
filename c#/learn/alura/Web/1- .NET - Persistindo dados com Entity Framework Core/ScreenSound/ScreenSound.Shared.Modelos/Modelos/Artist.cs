@@ -5,7 +5,22 @@ namespace ScreenSound.Modelos;
 [Table("Artistas")]
 public class Artist
 {
-    public virtual ICollection<Song> Songs { get; set; } = new List<Song>();    
+    public int Id { get; set; }
+
+    [Column("Nome")]
+    public string Name { get; set; }
+
+    [Column("Bio")]
+    public string Bio { get; set; }
+    
+    [Column("FotoPerfil")]
+    public string ProfilePicture { get; set; }
+
+    public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
+
+    public Artist()
+    {
+    }
 
     public Artist(string name, string bio)
     {
@@ -13,17 +28,6 @@ public class Artist
         Bio = bio;
         ProfilePicture = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png";
     }
-
-    [Column("Nome")]
-    public string Name { get; set; }
-
-    [Column("FotoPerfil")]
-    public string ProfilePicture { get; set; }
-
-    [Column("Bio")]
-    public string Bio { get; set; }
-    public int Id { get; set; }
-
     public void AddSong(Song song)
     {
         Songs.Add(song);

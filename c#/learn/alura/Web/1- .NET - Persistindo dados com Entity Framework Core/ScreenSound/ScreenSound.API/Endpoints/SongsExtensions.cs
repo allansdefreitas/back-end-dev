@@ -14,21 +14,21 @@ public static class SongsExtensions
     {
         app.MapGet("/Songs", ([FromServices] DAL<Song> dal) =>
         {
-            //var songsResponseList = EntityListToResponseList(dal.ListAll());
-            return Results.Ok(dal.ListAll());
+            var songsResponseList = EntityListToResponseList(dal.ListAll());
+            return Results.Ok(songsResponseList);
         });
 
         app.MapGet("/Songs/{name}", ([FromServices] DAL<Song> dal, string name) =>
         {
-            var song = dal.ListBy(a => a.Name.ToUpper().Equals(name.ToUpper()));
+            var songsList = dal.ListBy(a => a.Name.ToUpper().Equals(name.ToUpper()));
 
-            if (song is null)
+            if (songsList is null)
             {
                 return Results.NotFound();
             }
 
-            Console.WriteLine("song: " + song);
-            return Results.Ok(song);
+            var songsResponseList = EntityListToResponseList(songsList);
+            return Results.Ok(songsList);
         });
 
         app.MapGet("/Songs/{id:int}", ([FromServices] DAL<Song> dal, int id) =>
@@ -40,8 +40,8 @@ public static class SongsExtensions
             }
             else
             {
-                Console.WriteLine("song: " + song);
-                return Results.Ok(song);
+                var songResponse = EntityToResponse(song);
+                return Results.Ok(songResponse);
             }
         });
 
@@ -50,18 +50,19 @@ public static class SongsExtensions
             [FromBody] SongRequest songRequest) =>
         {
 
-            var song = new Song(songRequest.name)
+            var song = new Song()
             {
-                ArtistId = songRequest.artistId,
+                Name = songRequest.name,
                 ReleaseYear = songRequest.releaseYear,
+                ArtistId = songRequest.artistId,
                 Genres = songRequest.genres is not null ? 
                     GenreRequestConverter(songRequest.genres, dalGenre) :
                     new List<Genre>(),
             };
 
             dal.Add(song);
-
-            return Results.Ok(song);
+            var songResponse = EntityToResponse(song);
+            return Results.Ok(songResponse);
 
         });
 
@@ -101,7 +102,9 @@ public static class SongsExtensions
                 songFound.Artist = song.Artist;
 
                 dal.Update(songFound);
-                return Results.Ok(songFound);
+
+                var songFoundResponse = EntityToResponse(songFound);
+                return Results.Ok(songFoundResponse);
             }
 
         });
@@ -113,9 +116,7 @@ public static class SongsExtensions
     //Essa solução proposta pelo professor, utilizando código em vez de mecanismos apropriados do EF Core, não está boa!
     private static ICollection<Genre> GenreRequestConverter(ICollection<GenreRequest> genresRequest, DAL<Genre> dalGenre)
     {
-    
         var genresList = new List<Genre>();
-
         foreach (var genre in genresRequest)
         {
             var entity = RequestToEntity(genre);
@@ -134,7 +135,6 @@ public static class SongsExtensions
         return genresList;
     }
 
-
     private static Genre RequestToEntity(GenreRequest genreRequest)
     {
         Genre genre = new Genre(genreRequest.name, genreRequest.description);
@@ -149,7 +149,9 @@ public static class SongsExtensions
 
     private static SongResponse EntityToResponse(Song song)
     {
-        return new SongResponse(song.Id, song.Name!, song.Artist!.Id, song.Artist.Name, song.ReleaseYear);
+
+        var songResponse = new SongResponse(song.Id, song.Name!, song.Artist!.Id, song.Artist.Name, song.ReleaseYear);
+        return songResponse;
     }
 
 }

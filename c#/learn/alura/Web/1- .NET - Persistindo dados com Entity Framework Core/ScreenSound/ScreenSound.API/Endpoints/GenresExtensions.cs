@@ -14,21 +14,21 @@ public static class GenresExtensions
     {
         app.MapGet("/Genres", ([FromServices] DAL<Genre> dal) =>
         {
-            //var genresResponseList = EntityListToResponseList(dal.ListAll());
-            return Results.Ok(dal.ListAll());
+            var genresResponseList = EntityListToResponseList(dal.ListAll());
+            return Results.Ok(genresResponseList);
         });
 
         app.MapGet("/Genres/{name}", ([FromServices] DAL<Genre> dal, string name) =>
         {
-            var genre = dal.ListBy(a => a.Name.ToUpper().Equals(name.ToUpper()));
+            var genres = dal.ListBy(a => a.Name.ToUpper().Equals(name.ToUpper()));
 
-            if (genre is null)
+            if (genres is null)
             {
                 return Results.NotFound();
             }
 
-            Console.WriteLine("genre: " + genre);
-            return Results.Ok(genre);
+            var genresResponseList = EntityListToResponseList(genres);
+            return Results.Ok(genresResponseList);
         });
 
         app.MapGet("/Genres/{id:int}", ([FromServices] DAL<Genre> dal, int id) =>
@@ -40,8 +40,8 @@ public static class GenresExtensions
             }
             else
             {
-                Console.WriteLine("genre: " + genre);
-                return Results.Ok(genre);
+                var genreResponse = EntityToResponse(genre);
+                return Results.Ok(genreResponse);
             }
         });
 
@@ -52,7 +52,8 @@ public static class GenresExtensions
 
             dal.Add(genre);
 
-            return Results.Ok(genre);
+            var genreResponse = EntityToResponse(genre);
+            return Results.Ok(genreResponse);
 
         });
 
@@ -88,7 +89,9 @@ public static class GenresExtensions
                 genreFound.Description = genre.Description;
 
                 dal.Update(genreFound);
-                return Results.Ok(genreFound);
+
+                var genreFoundResponse = EntityToResponse(genreFound);
+                return Results.Ok(genreFoundResponse);
             }
 
         });
