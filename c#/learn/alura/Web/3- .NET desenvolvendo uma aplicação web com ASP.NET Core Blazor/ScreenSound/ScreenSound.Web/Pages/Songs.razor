@@ -1,0 +1,25 @@
+﻿@page "/Songs"
+
+
+@inject SongAPI songAPI
+
+<h3>Songs</h3>
+@if (songs is not null)
+{
+    foreach (var song in songs)
+    {
+        <p>@song.Name</p>
+    }
+}
+
+
+@code {
+    private ICollection<SongResponse>? songs;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        songs = await songAPI.GetSongsAsync();
+    }
+
+}

@@ -8,6 +8,8 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddTransient<ArtistAPI>();
+builder.Services.AddTransient<SongAPI>();
+builder.Services.AddTransient<GenreAPI>();
 
 builder.Services.AddHttpClient("API", client => {
     client.BaseAddress = new Uri(builder.Configuration["APIServer:Url"]!);

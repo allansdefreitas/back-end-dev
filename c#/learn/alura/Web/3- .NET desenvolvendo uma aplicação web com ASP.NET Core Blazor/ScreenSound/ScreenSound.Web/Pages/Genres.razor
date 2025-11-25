@@ -1,0 +1,25 @@
+﻿@page "/Genres"
+
+
+@inject GenreAPI genreAPI
+
+<h3>Genres</h3>
+@if (genres is not null)
+{
+    foreach (var genre in genres)
+    {
+        <p>@genre.Name</p>
+    }
+}
+
+
+@code {
+    private ICollection<GenreResponse>? genres;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        genres = await genreAPI.GetGenresAsync();
+    }
+
+}
