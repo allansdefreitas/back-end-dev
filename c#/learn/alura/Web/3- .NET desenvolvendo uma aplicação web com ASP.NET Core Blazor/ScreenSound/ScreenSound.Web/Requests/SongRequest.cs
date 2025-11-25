@@ -1,5 +1,3 @@
-﻿using ScreenSound.Shared.Modelos.Modelos;
-
-namespace ScreenSound.Web.Requests;
+﻿namespace ScreenSound.Web.Requests;
 
 public record SongRequest(string Name, int ArtistId, int ReleaseYear, ICollection<GenreRequest> Genres = null);

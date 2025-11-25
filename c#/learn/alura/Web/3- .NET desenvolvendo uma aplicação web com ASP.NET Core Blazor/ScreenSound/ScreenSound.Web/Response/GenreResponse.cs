@@ -1,5 +1,3 @@
-﻿using ScreenSound.Modelos;
-
-namespace ScreenSound.Web.Response;
+﻿namespace ScreenSound.Web.Response;
 
 public record GenreResponse(int Id, string Name, string Description);

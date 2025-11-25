@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ScreenSound.API.Requests;
-using ScreenSound.API.Response;
+using ScreenSound.Web.Requests;
+using ScreenSound.Web.Response;
 using ScreenSound.Modelos;
 using ScreenSound.Shared.Modelos.Modelos;
 

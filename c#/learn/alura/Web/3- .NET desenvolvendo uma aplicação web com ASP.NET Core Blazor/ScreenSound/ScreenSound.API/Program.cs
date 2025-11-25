@@ -30,13 +30,24 @@ internal class Program
 
         // Evita erro da serialização cíclica de atributo
         builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options => options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+        builder.Services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(policy =>
+            {
+                policy.AllowAnyOrigin()
+                      .AllowAnyMethod()
+                      .AllowAnyHeader();
+            });
+        });
+
         var app = builder.Build();
 
+        app.UseCors();
 
         ArtistsExtensions.AddEndpointsArtists(app);
         SongsExtensions.AddEndpointsSongs(app);
         GenresExtensions.AddEndpointsGenres(app);
-
 
         app.UseSwagger();
         app.UseSwaggerUI();

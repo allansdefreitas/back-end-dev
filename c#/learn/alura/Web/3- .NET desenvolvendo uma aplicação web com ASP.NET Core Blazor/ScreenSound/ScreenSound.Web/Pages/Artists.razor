@@ -1,11 +1,25 @@
 ﻿@page "/Artists"
+
+
+@inject ArtistAPI artistAPI
+
 <h3>Artists</h3>
-
-
-<h4>@Message</h4>
+@if(artists is not null)
+{
+    foreach(var artist in artists)
+    {
+        <p>@artist.Name</p>
+    }
+}
 
 
 @code {
-    public string Message { get; set; } = "Salve, mundi!";
+    private ICollection<ArtistResponse>? artists;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        artists = await artistAPI.GetArtistasAsync();        
+    }
 
 }
